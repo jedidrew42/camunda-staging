@@ -1,0 +1,61 @@
+<div class="whitepapers">
+  {{$sectionVars := index .Site.Data .Page.Section}}
+  {{$i18n := index $sectionVars.whitepapers.detail .Site.LanguageCode}}
+  <div class="whitepapers-detail" data-i18n="{{$i18n | jsonify}}">
+    {{if eq .Params.title ""}}
+    <div class="header">
+      <div class="text-center">
+        <p>{{$i18n.notavailable}}</p>
+      </div>
+    </div>
+    {{else}}
+    <div class="header">
+      <div class="text-center">
+        <h1 class="light lead">{{.Params.title}}</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-3">
+          <div class="img-wrapper"><img src="{{.Params.thumbnail}}"></div>
+        </div>
+        <div class="col-xs-7">
+          <div class="cta">
+            <div class="row">
+              <div class="col-xs-8">
+                <h2 class="light">{{$i18n.downloadWhitepaper}}</h2>
+                <!--<div class="form-success"></div>-->
+                <!--<a href="{{.Params.pdf}}" target="_blank" class="btn btn-primary download-whitepaper" title="Download Whitepaper">{{$i18n.download}}</a>-->
+                  <div id="contactusform" class="hbspt-form"></div>
+                  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                  <script>
+                    hbspt.forms.create({
+                    portalId: "4513465",
+                    formId: "{{.Params.hsformid}}",
+                    css: "",
+                    target: "#contactusform",
+                    locale: "{{.Site.LanguageCode}}"
+                  });
+                  </script>
+
+              </div>
+            </div>
+                        
+            <!--<form class="form-inline" data-downloadlink="{{.Params.pdf}}">
+              <div>
+                <input type="email" name="email" class="form-control" placeholder="{{$i18n.emailPlaceholder}}" required>
+                <input type="hidden" name="mcAutomationId" value="{{.Params.mcautomationid}}">
+                <input type="hidden" name="mcEmailId" value="{{.Params.mcemailid}}">
+                <input type="submit" class="btn btn-primary" value="{{$i18n.download}}">
+              </div>
+            </form>--><hr>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                {{.Params.teaser | markdownify }}
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</div>

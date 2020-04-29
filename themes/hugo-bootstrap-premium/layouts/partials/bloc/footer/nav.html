@@ -1,0 +1,24 @@
+<div class="row text-left footnav" style="font-size: 90%; margin-top:50px;">
+	{{ range .Site.Menus.footer }}
+		<div class="col-xs-6 col-md-2">
+			<p><strong>{{ .Name }}</strong></p>
+			{{ if .HasChildren }}
+				{{ range .Children }}
+				<a href="{{ .URL }}">{{ .Name }}</a><br>
+				{{ end }}
+			{{ end }}
+		</div>
+	{{end}}
+	<div class="col-xs-6 col-md-2">
+
+		<a class="button is-success" onclick="return klaro.show();">Change consent settings</a>
+		
+		<p><strong>Languages</strong></p>
+		<a class="changelanguage" data-href="en" href="{{ .Permalink }}" >
+				English
+		</a><br>
+		<a class="changelanguage" data-href="de" href="{{ .Permalink }}" >
+				Deutsch
+			</a><br>
+	</div>
+</div>

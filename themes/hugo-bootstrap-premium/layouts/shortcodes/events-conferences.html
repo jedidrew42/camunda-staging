@@ -1,0 +1,12 @@
+{{ $conferencesVars := index .Site.Data .Page.Section }}
+{{ $i18n := index $conferencesVars.conferences .Site.LanguageCode }}
+<table class="conferences table table-striped" style="margin-bottom:100px">
+  <thead>
+    <tr>
+      <th>{{$i18n.event}}</th><th>{{$i18n.date}}</th><th>{{$i18n.city}}</th><th>{{$i18n.country}}</th><th>{{$i18n.find}}</th>
+    </tr>
+  </thead>
+  <tbody class="loading-indicator">
+    <tr><td colspan="5" rowspan="2"> </td></tr>
+  </tbody>
+</table>

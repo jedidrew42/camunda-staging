@@ -1,0 +1,16 @@
+{
+  "de": {
+    "event": "Konferenz",
+    "date": "Datum",
+    "city": "Stadt",
+    "country": "Land",
+    "find": "Wo Sie uns finden"
+  },
+  "en": {
+    "event": "Conference",
+    "date": "Date",
+    "city": "City",
+    "country": "Country",
+    "find": "Where to find us"
+  }
+}

@@ -1,0 +1,82 @@
+{{ $pressVars := index .Site.Data.about "press" }}
+<div class="press">
+  <div class="full-width dark-bg highlight text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="light">Press</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-width dark-bg">
+    <div class="container">
+      <div class="row list">
+        <div class="col-md-6 col-xs-12">
+          <h3 class="light lead">Camunda in the News</h3>
+          <ul class="cards row" style="padding-left: 0; padding-top: 0;">
+            {{ $presscoverage := index $pressVars.presscoverage .Site.LanguageCode }}
+            {{ $lang := print .Site.LanguageCode }}
+            {{ range sort $presscoverage "date" "desc" }}
+            {{ if and (eq "en" $lang) (eq "de" .language) }}
+            {{ else }}
+            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-figure">
+                      <a href="{{.link}}">
+                        <img class="img-responsive" src="{{.logo}}" alt="Logo">
+                      </a>
+                    </div>
+                    <div class="meta">
+                      <span class="parse-date">{{.date}}</span>
+                    </div>
+                    <hr>
+                    <div class="name-wrap">
+                      <div class="name">{{.title}}</div>
+                    </div>
+                    <div class="link-container">
+                      <a href="{{.link}}">{{i18n "readmore"}}</a>
+                    </div>
+                  </div>
+                  </div>
+              </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+          <h3 class="light lead">Press Releases</h3>
+          <ul class="cards row" style="padding-left: 0; padding-top: 0;">
+          {{ $overview := index $pressVars.overview .Site.LanguageCode }}
+          {{ range sort $overview "date" "desc" }}
+            {{if ne .text ""}}
+            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-container">
+                <div class="card">
+                  <a href="{{.technicalName}}/"><h3>{{.title}}</h3></a>
+                  <div class="meta">
+                    <span class="parse-date">{{.date}}</span>
+                  </div>
+                  <hr>
+                  <div class="name-wrap">
+                    <div class="name">
+                    {{.text | markdownify | safeHTML | truncate 150 }}
+                    </div>
+                  </div>
+                  <div class="link-container">
+                    <a href="{{.technicalName}}/">{{i18n "readmore"}}</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            {{end}}
+          {{ end }}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

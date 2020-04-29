@@ -1,0 +1,30 @@
+<table class="table editions">
+  <tr class="head">
+    <td class="text-center"></td>
+    <td class="editions-name"><p>Community</p></td>
+    <td class="editions-name editions-name-standard" ><p>Enterprise</p></td>
+  </tr>
+  <tr class="cta">
+    <td class="level3"></td>
+    <td class="community"></td>
+    <td class="enterprise check" ><a href="/enterprise">More Info</a></td>
+  </tr>
+  {{ $productsVars := index .Site.Data .Page.Section }}
+  {{ $i18n := index $productsVars.cockpit .Site.LanguageCode }}
+
+  {{ range $index, $row := $i18n }}
+    {{ if eq $row.head true}}
+      <tr>
+       <td class="level2 header">{{$row.title}}</td>
+       <td class="community"></td>
+       <td class="enterprise"></td>
+     </tr>
+    {{ else }}
+      <tr>
+        <td class="level3">{{$row.title | markdownify}} - <a href="{{$row.doclink}}">Read more</a></td>
+        <td class="check community">{{if eq $row.community true}}<i class="glyphicon glyphicon-ok"></i>{{end}}</td>
+        <td class="check enterprise">{{if eq $row.enterprise true}}<i class="glyphicon glyphicon-ok"></i>{{end}}</td>
+      </tr>
+    {{ end}}
+  {{ end }}
+</table>

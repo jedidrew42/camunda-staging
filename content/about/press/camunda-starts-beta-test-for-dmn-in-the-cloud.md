@@ -1,0 +1,11 @@
+---
+title: "Camunda Press - Camunda starts Beta Test for DMN in the Cloud | Camunda BPM"
+
+date: 2017-10-25T10:39:22+02:00
+draft: false
+
+---
+{{<press-single
+title="Camunda starts Beta Test for DMN in the Cloud"
+text="Today, the software vendor Camunda has announced a public beta test of their new DMN-related cloud offering. It is available at https://dmn.camunda.cloud and free to use.<br><br>DMN ('Decision Model and Notation') is an IT industry standard for decision management. It allows business users to get involved in the technical implementation of business rules and even change them independently from rigid software development cycles.<br><br>Camunda's idea is to let any developer benefit from DMN without necessarily embedding and operating their DMN engine. Developers can create and test DMN decision tables directly in the web browser. They can deploy those tables to the Camunda server with one click, and then call and execute them from their own application via the REST API. The execution result will be sent back to the client application for further processing. On Camunda's website, there are several code examples for different programming languages such as Java, Javascript, C# or PHP.<br>Camunda's CEO Jakob Freund explains: 'We have made this service as simple as possible, since we want all developers out there to benefit from DMN with minimal efforts.'<br><br>During the beta test stage the new service is free to use. However, Camunda gives no guarantees regarding availability, correctness and data protection. Currently, there is no date for general availability of Camunda's new service, as Jakob Freund explains: 'We want to learn how the community adpots our offering, and based on that we will decide upon the next steps.'<br><br>About Camunda:<br>Camunda headquartered in Berlin, Germany, is a software vendor and consultancy specializing in Business Process Management (BPM).  The company’s core product, Camunda BPM, is an open source platform for the automation of business processes. It is being used by companies such as AT&T, Lufthansa Technik and Zalando.<br>"
+date="2016-03-21">}}

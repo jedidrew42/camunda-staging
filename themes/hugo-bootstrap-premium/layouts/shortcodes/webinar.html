@@ -1,0 +1,24 @@
+{{$i18nForm := index .Site.Data.learn.webinars.form .Site.LanguageCode}}
+
+<div class="row" style="margin-bottom:100px">
+	<div class="col-md-8" style="padding-right:50px">
+		 {{if len .Inner}}<p>{{.Inner}}</p>{{end}}
+	</div>
+	<div class="col-md-4">
+		<h2 class="light lead">{{$i18nForm.cta}}</h2>
+
+		    <div id="signupform" class="hbspt-form"></div>
+		    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		    <script>
+		      hbspt.forms.create({
+		      portalId: "4513465",
+		      formId: "{{$i18nForm.hubspotForm}}",
+					goToWebinarWebinarKey: "{{$i18nForm.goToWebinarWebinarKey}}",
+		      css: "",
+		      target: "#signupform",
+		      locale: "{{.Site.LanguageCode}}",
+		    });
+		    </script>
+
+	</div>
+</div>

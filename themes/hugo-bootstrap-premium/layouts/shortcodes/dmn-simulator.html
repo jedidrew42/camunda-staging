@@ -1,0 +1,170 @@
+<style>
+    #topContainer td {
+        padding: 3px;
+    }
+
+    input,
+    select {
+        display: block;
+        height: 28px;
+        width: 100%;
+        border: 1px dashed green;
+        padding-left: 10px;
+    }
+
+    .error {
+        position: absolute;
+        top: 200;
+        bottom: 200;
+        left: 200;
+        right: 200;
+        border: 10px solid red;
+        overflow: scroll;
+        background: white;
+        color: black;
+        z-index: 100;
+        font-family: monospace;
+        font-size: large;
+    }
+
+    input[readonly] {
+        background-color: #DDD;
+    }
+
+    #js-table {
+        margin: 10px;
+        height: 450px;
+        overflow: auto;
+    }
+
+    #topContainer {
+        min-height: 100px;
+        margin-bottom: 25px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table tr td:first-child {
+        width: 30%;
+        text-align: right;
+    }
+
+    table tr td.inputElement {
+        width: 55%;
+    }
+
+    .fired td {
+        background-color: rgb(0, 213, 255) !important;
+    }
+
+    #inputsContainer table {
+        margin-bottom: 10px;
+        table-layout: auto;
+    }
+
+    #inputsContainer table th,
+    #inputsContainer table td {
+        word-break: break-word;
+    }
+
+    #inputsContainer .inputTypeRef {
+        width: 15%;
+    }
+</style>
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="content dmn-simulator" id="js-drop-zone">
+            <div id="topContainer" class="row">
+                <div id="inputs" class="col-md-6 col-xs-12">
+                    <h2 id="inputsHeader">Inputs:</h2>
+                    <table id="decisionTable">
+                        <tr>
+                            <td>Decision table:</td>
+                            <td>
+                                <select name="decisionTableName" id="decisionTableName">
+            </select>
+                            </td>
+                    </table>
+                    <div id="inputsContainer"></div>
+                </div>
+                <div id="outputs" class="col-md-6 col-xs-12">
+                    <h2 id="outputsHeader">Outputs:</h2>
+                    <table id="outputsContainer"></table>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <p>
+                    <button id="simulateButton" class="btn btn-xxlg btn-primary" type="button" id="download-button">Simulate now</button>
+                </p>
+                <p>
+                    <a href="feedback/" target="_blank" id="download-button">How can we improve this Tool?</a>
+                </p>
+            </div>
+
+            <div id="js-table">
+
+            </div>
+            <button id="uploadButton" class="btn btn-default" style="margin-top:20px !important">Upload DMN Table</button>
+
+            <a id="downloadButton" class="btn btn-default " style="margin-top:20px !important">Download DMN Table</a>
+
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Simulate</h2>
+                    <p>
+                        Enter data as Inputs and click "Simulate now". The rules that applied will be highlighted in the DMN table, and the Output data will be displayed. If there was a problem, you will see the DMN engine's error message.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Change Rules</h2>
+                    <p>
+                        Edit the <a href="https://docs.camunda.org/manual/reference/dmn11/feel/language-elements/" target="_blank">FEEL Expressions</a> in the Decision Table Cells. For example, [5..8] means "if the input is 5, 6, 7 or 8".
+                    </p>
+                    <p>You can also change the Decision Table's <a href="https://docs.camunda.org/manual/reference/dmn11/decision-table/hit-policy/" target="_blank">Hit Policy</a>.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Add Rules</h2>
+                    <p>
+                        Click on the little <strong style="color:green">+</strong> in the table footer to add a table row (i.e., a new rule), or right-click on an existing rule to remove it. Rearrange the order of the rules via drag and drop by clicking
+                        on the number at the row's left end.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Add Inputs/Outputs</h2>
+                    <p>
+                        Click on the little <strong style="color:green">+</strong> next to "Input" or "Output" in the table header. You should then specify a label and the <span style="background-color:grey; color:white">
+         &nbsp;data type&nbsp;</span>. You will see the respective input or output as a new field above the DMN table, too.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Error in DMN execution</h4>
+                    </div>
+                    <div id="myModalBody" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

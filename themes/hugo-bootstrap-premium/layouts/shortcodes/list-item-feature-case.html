@@ -1,0 +1,18 @@
+<section class="page-section">
+  <p>&nbsp;</p>
+
+  <header>
+    <h3 class="light feature-case" {{if .Params.id}}id="{{.Params.id}}"{{end}}>{{.Params.title}}</h3>
+  </header>
+  <div class="row">
+    <div class="col-md-12">
+      {{if .Params.image_int}}
+      <figure class="image clickable content__image_featured">
+        <img src="{{.Params.image_int}}" class="shadow" style="width:100%;">
+      </figure>
+      {{end}}
+      <p>{{.Inner}}</p>
+    </div>
+
+</div>
+</section>

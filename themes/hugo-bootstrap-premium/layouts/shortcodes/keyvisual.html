@@ -1,0 +1,94 @@
+<div class="full-width keyvisual">
+  <div class="container {{if .Params.image}}image-container{{else}}text-center{{end}}">
+      {{if .Params.image}}
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="img-absolute">
+              <img src="{{.Params.image}}"/>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="text-container">
+              <h1 class="light">{{.Params.title | markdownify}}</h1>
+              <p class="light lead" style="max-width:500px">{{ .Inner }}</p></center>
+              {{if isset .Params "btnsHref"}}
+              <p class="lead download-button-wrapper" style="margin-top: 40px">
+                {{ $hrefs := split .Params.btnsHref "," }}
+                {{ $classes := split .Params.btnsClass "," }}
+                {{ $labels := split .Params.btnsLabel "," }}
+                {{ range $index, $href := $hrefs }}
+                <a href="{{ $href }}" class="btn btn-lg {{ index $classes $index }}">{{ index $labels $index }}</a>
+                {{ end }}
+              </p>
+              {{end}}
+            </div>
+          </div>
+        </div>
+      {{else}}
+      <h1 class="lighta">{{.Params.title}}</h1>
+      <p class="lead download-button-wrapper" style="margin-top: 40px">
+        {{ $hrefs := split .Params.btnsHref "," }}
+        {{ $classes := split .Params.btnsClass "," }}
+        {{ $labels := split .Params.btnsLabel "," }}
+        {{ range $index, $href := $hrefs }}
+        <a href="{{ $href }}" class="btn btn-lg {{ index $classes $index }}">{{ index $labels $index }}</a>
+        {{ end }}
+      </p>
+      <center>
+
+        <ul class="list-keyvisual">
+
+          {{if .Params.listtitle1}}
+          <li>
+            <div class="image_list_keyvisual"><img src="/svg/checkmark.png"> </div>
+            <div class="content_list_keyvisual">{{.Params.listtitle1}}</div>
+          </li>
+          {{end }}
+
+          {{if .Params.listtitle2}}
+          <li>
+
+            <div class="image_list_keyvisual"><img src="/svg/checkmark.png"> </div>
+            <div class="content_list_keyvisual">
+
+              {{.Params.listtitle2}}
+              {{if .Params.listtitle2b}}
+              <br>
+              {{.Params.listtitle2b}}
+              {{end}}
+
+            </div>
+          </li>
+          {{end }}
+
+          {{if .Params.listtitle3}}
+          <li>
+            <div class="image_list_keyvisual"><img src="/svg/checkmark.png"> </div>
+            <div class="content_list_keyvisual">{{.Params.listtitle3}}</div>
+          </li>
+          {{end }}
+
+          {{if .Params.listtitle4}}
+          <li>
+            <div class="image_list_keyvisual"><img src="/svg/checkmark.png"></div>
+            <div class="content_list_keyvisual">{{.Params.listtitle4}}</div>
+          </li>
+          {{end }}
+
+        </ul>
+
+        <p class="light lead" style="max-width:650px">{{ .Inner }}</p>
+      </center>
+      {{end}}
+  </div>
+
+
+</div>
+{{if .Params.sublinehead}}
+  <div class="subline row">
+    <div class="col-xs-push-3 col-xs-6 text-center">
+        <h2 class="lead light">{{.Params.sublinehead}}</h2>
+        <h3 class="light">{{.Params.subline}}</h3>
+    </div>
+  </div>
+{{end}}

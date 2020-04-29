@@ -1,0 +1,11 @@
+---
+title: "Camunda Press - Camunda BPM 7.4 has been released on November 30th  | Camunda BPM"
+
+date: 2017-10-25T10:39:22+02:00
+draft: false
+
+---
+{{<press-single
+title="Camunda BPM 7.4 has been released on November 30th "
+text="<strong>Berlin, Germany</strong>– On November 30th, Camunda has released Camunda BPM 7.4, a new version of an open source software for Business Process Management (BPM). Camunda BPM 7.4 can be downloaded for free at www.camunda.org. <br><br>Camunda BPM 7.4 supports the standard „Decision Model and Notation (DMN)“, that has been released earlier in 2015 by Object Management Group (OMG) – the same institution that is also responsible for the established BPMN standard. DMN allows to define and automate decision tables. This means that business users can create and maintain their business rules more independently from software developers.  <br><br>Camunda BPM 7.4 comes with a DMN-conformant table editor, a technical engine for executing DMN tables and a web application that allows to review executed decisions and change decision tables on the fly. Since Camunda BPM also supports the standards BPMN (for workflow automation) and CMMN (for case management), this promises a more holistic approach for automating business processes. <br>Besides this, the new Camunda Modeler is an open source tool for creating BPMN diagrams. It is based on the well-known project bpmn.io and targets business users as well as software developers. <br><br>Camunda’s CEO Jakob Freund comments: „Camunda is once again the driver for innovation in the BPM market. Our core product is open source, and at the same time we are a profitable business with 40 employees, without any external funding. Among our customers are well-known names such as AT&T, Allianz Indonesia, T-Mobile and Zalando. I think we have already achieved a lot, but this is just the beginning.”<br><br>About Camunda Services GmbH:<br><br>Camunda Services GmbH, headquartered in Berlin, Germany, is a software vendor and consultancy specializing in Business Process Management (BPM).  The company’s core product, Camunda BPM, is an open source platform for the automation of business processes. <br><br>Press contact:<br><br>For further information please contact:<br>Jakob Freund<br>Tel.: +49 30 664 04 09 00<br>Email: Jakob.Freund@camunda.com <br>"
+date="2015-11-30">}}

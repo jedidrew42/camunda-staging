@@ -1,0 +1,52 @@
+.highlight-visual {
+	&.full-width.dark-bg {
+		background: #ff1e00;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(/svg/brackground-new-home.png);
+		color: #fff;
+		background-position: center center;
+	}
+	.btn-primary {
+		background-color: white;
+		border: 1px solid white;
+		color: #ff1e00;
+		border-radius: 0px;
+		margin-right: 0.5em;
+
+		&:hover {
+			background-color: #ff1e00;
+			border: 1px solid #ff1e00;
+			color: white;
+		}
+	}
+
+	.btn-default {
+		background-color: transparent;
+		border: 1px solid white;
+		color: white;
+		border-radius: 0px;
+
+		&:hover {
+			background-color: white;
+			border: 1px solid white;
+			color: #ff1e00;
+		}
+	}
+
+	padding-top: 140px;
+	padding-bottom: 70px;
+	margin-bottom: 40px;
+}
+.highlight-visual-img {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@media (max-width: @grid-float-breakpoint-max) {
+		display: none;
+	}
+
+	.img-wrapper {
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,70 @@
+h2.whr-group {
+  font-size: 16px;
+  font-weight: bold;
+}
+h3.whr-title {
+  font-size: 16px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+li.whr-item {
+  border-bottom: 1px solid @border-color-default;
+  list-style-type: none;
+}
+.whr-info {
+  display: none;
+}
+.job-per-department ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  li {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+#pointer {
+   width: 200px;
+   height: 40px;
+   position: relative;
+   background: red;
+ }
+ .department-list li a {
+   color: #000;
+   height: 40px;
+   padding: 8px 15px 8px 25px;
+ }
+ .department-list li.active a:after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-left: 20px solid transparent;
+   border-top: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+ }
+ .department-list li.active a:before {
+   content: "";
+   position: absolute;
+   right: -20px;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-left: 20px solid #b5152b;
+   border-top: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+ }
+.job-detail-link {
+  padding: 19px 0px;
+  display: block;
+  overflow: hidden;
+}
+.job-detail-link:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.work-place .glyphicon {
+   margin-right: 10px;
+}

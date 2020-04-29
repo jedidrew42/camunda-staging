@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+User-agent: Googlebot 
+Disallow: / pdf/camunda-microservices-orchestration-survey-report-2018.pdf$

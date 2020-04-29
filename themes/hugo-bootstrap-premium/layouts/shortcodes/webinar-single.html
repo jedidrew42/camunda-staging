@@ -1,0 +1,62 @@
+{{ $i18n := index .Site.Data.learn.webinars.detail .Site.LanguageCode}}
+<div class="full-width dark-bg highlight text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="light">{{.Params.title}}</h1>
+      </div>
+    <!--  <div class="col-xs-offset-2 col-xs-8">
+        <p class="light lead">
+          <span class="parse-date-time">{{.Params.datetime}}</span> {{if ne .Params.datetimeend ""}}- <span class="parse-date-time">{{.Params.datetimeend}}</span>{{end}} CET
+        </p>
+        </div>-->
+      </div></div></div>
+      <div class="row" style="margin-bottom:100px">
+        {{if ne .Params.embedlink ""}}
+        <div class="col-xs-12 mt-50 mb-50 text-center">
+          <iframe src="{{.Params.embedlink}}" class="embed-responsive-item" width="80%" height="400" frameborder="0" allow="fullscreen"></iframe>
+        </div>
+        {{end}}
+      	<div class="col-md-8" style="padding-right:50px">
+      		 <p>
+      		</p><h2 class="light lead">{{$i18n.descriptiontitle}}</h2>
+          <div>
+            {{.Params.description  | markdownify}}
+            </div>
+
+
+      	</div>
+      	<div class="col-md-4">
+          {{if eq .Params.hubspotid ""}}
+              {{if ne .Params.recordinglink ""}}
+              <h2 class="light lead">{{$i18n.recording}}</h2>
+              <a href="{{.Params.recordinglink}}" class="btn btn-default" title="{{.Params.title}} {{$i18n.recording}}" target="_blank">{{$i18n.watchrecording}}</a>
+              {{end}}
+          {{else}}
+
+            {{ $datetime := replaceRE "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})([\\-\\+].*)$" "$1:00$2" .Params.datetime }}
+            {{ $is_future := gt (time $datetime).Unix now.Unix }}
+
+            {{ if $is_future }}
+              <h2 class="light lead">{{ $i18n.registernow }}</h2>
+            {{ else }}
+              <h2 class="light lead">{{ $i18n.watch }}</h2>
+            {{ end }}
+
+            <div id="signupform" class="hbspt-form"></div>
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+              portalId: "4513465",
+              formId: "{{.Params.hubspotid}}",
+              {{if ne .Params.gotowebinarwebinarkey ""}}
+              goToWebinarWebinarKey: "{{.Params.gotowebinarwebinarkey}}",
+              {{end}}
+              css: "",
+              target: "#signupform",
+              locale: "en",
+            });
+            </script>
+          {{end}}
+      	</div>
+      </div>

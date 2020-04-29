@@ -1,0 +1,76 @@
+<div class="full-width keyvisual featured">
+  <div class="container {{if .Params.image}}{{else}}text-center{{end}}">
+
+    {{if .Params.image}}
+      <div class="row">
+
+            <h1 class="light">{{.Params.title | markdownify}}</h1>
+            <h2 class="light">{{.Params.subtitle | markdownify}}</h2>
+
+            <div class="light">
+              {{if .Params.lead}}
+                <p>{{.Params.lead}}</p>
+              {{end}}
+
+              {{if .Params.videourl}}
+                <img src="{{.Params.image}}" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+              {{end}}
+
+              {{ .Inner }}
+            </div>
+
+            {{if .Params.videourl}}
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" id="myModal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <iframe id="player" width="100%" height="415" src="{{.Params.videourl}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{end}}
+
+            {{if isset .Params "btnsHref"}}
+              <p class="lead download-button-wrapper" style="margin-top: 40px">
+
+                {{ $hrefs := split .Params.btnsHref "," }}
+                {{ $classes := split .Params.btnsClass "," }}
+                {{ $labels := split .Params.btnsLabel "," }}
+
+                {{ range $index, $href := $hrefs }}
+                <a href="{{ $href }}" class="btn btn-lg {{ index $classes $index }}">{{ index $labels $index }}</a>
+                {{ end }}
+              </p>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <h1 class="light">{{.Params.title}}</h1>
+      <center><p class="light lead" style="max-width:500px">{{ .Inner }}</p></center>
+      <p class="lead download-button-wrapper" style="margin-top: 40px">
+        {{ $hrefs := split .Params.btnsHref "," }}
+        {{ $classes := split .Params.btnsClass "," }}
+        {{ $labels := split .Params.btnsLabel "," }}
+        {{ range $index, $href := $hrefs }}
+        <a href="{{ $href }}" class="btn btn-lg {{ index $classes $index }}">{{ index $labels $index }}</a>
+        {{ end }}
+      </p>
+      {{end}}
+  </div>
+</div>
+{{if .Params.sublinehead}}
+  <div class="subline row">
+    <div class="col-xs-push-3 col-xs-6 text-center">
+        <h2 class="lead light">{{.Params.sublinehead}}</h2>
+        <h3 class="light">{{.Params.subline}}</h3>
+    </div>
+  </div>
+{{end}}

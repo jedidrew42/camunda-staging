@@ -1,0 +1,16 @@
+<div class="tabs">
+  {{if eq .Site.Data.releases.camundabpm.showAlpha true}}
+  <ul class="btn-group" role="tablist">
+    {{ $labels := split .Params.Navlabels "////" }}
+    {{ $controls := split .Params.Navcontrols "////" }}
+    {{ range $index, $label := $labels }}
+    <li class="btn-group {{if eq 0 $index }}active{{end}}">
+      <a class="btn btn-default" href="#{{index $controls $index}}" aria-controls="{{index $controls $index}}" role="tab" data-toggle="tab">{{$label}}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{end}}
+  <div class="tab-content" style="margin-top:50px; margin-bottom:50px">
+  {{.Inner}}
+  </div>
+</div>

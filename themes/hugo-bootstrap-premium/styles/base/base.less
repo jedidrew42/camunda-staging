@@ -1,0 +1,300 @@
+@import "_card.less";
+@import "_lists.less";
+@import "_forms.less";
+
+#main-content {
+  min-height: 450px;
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+body > hr {
+  margin: 0;
+}
+a {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+h1.lead {
+   font-size: 48px;
+ }
+
+h2.lead {
+   font-size: 40px;
+ }
+.lead {
+  font-size: 20px;
+}
+p:empty {display:none;}
+
+footer.page-footer {
+  background: #2E3434;
+  .footnav {
+    strong {
+      color: #E3E3E3;
+    }
+    a {
+      color: #7f7f7f;
+      &:hover, &:focus {
+        color: @background-color-default;
+      }
+    }
+  }
+  #socialLinks {
+    margin-top: 80px;
+    li {
+      width: 50px;
+    }
+    a {
+      color: #7f7f7f;
+      &:hover, &:focus {
+        color: @background-color-default;
+      }
+    }
+  }
+  .list-dotted {
+    margin-bottom: 0;
+    li {
+      color: #7f7f7f;
+    }
+    a {
+      color: #7f7f7f;
+      &:hover, &:focus {
+        color: @background-color-default;
+      }
+    }
+  }
+  .final {
+    background: #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.label-primary {
+	background-color: @background-color-default;
+	color: #b2b2b2;
+	font-weight:400;
+}
+
+.brand-logo img {
+	width: 110px !important;
+}
+.btn-primary {
+	background-color: @link-color;
+	border: 1px solid @link-color;
+
+  &:hover, &:active, &:focus, &:active:focus {
+    background-color: #cc1800;
+  	border: 1px solid #cc1800;
+  }
+}
+
+.btn-camundacon-cta {
+  background-color: @camundacon-red;
+  border: 1px solid @camundacon-red;
+  color: #FFFFFF;
+
+  &:hover, &:active, &:focus, &:active:focus {
+    background-color: @camundacon-red-hover;
+    border: 1px solid @camundacon-red-hover;
+    color: #FFFFFF;
+  }
+}
+
+table {
+  td.camundacon-red {
+    background: @camundacon-red;
+  }
+
+  td.camundacon-blue {
+    background: @camundacon-blue;
+  }
+
+  i.white {
+  color:#FFFFFF;
+  }
+}
+
+.camundacon-hero {
+  background: url('/img/camundacon/camundacon-hero.jpg') !important;
+}
+
+.camundacon-hero-single {
+  background: url('/img/camundacon/camundacon-hero.jpg') 0 -50px !important;
+}
+
+.camundacon-lead {
+  color: #FFFFFF;
+}
+
+img.camundacon-logo {
+  width: 290px;
+  margin: 30px auto 30px;
+}
+
+.tabs {
+  ul {
+    display: block;
+    margin: 30px auto 50px auto;
+    list-style: none;
+    width: 450px;
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+    .btn-group {
+      margin: 0;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+
+      &.active {
+        .btn-default {
+          background-color: #e6e6e6;
+          border-color: #adadad;
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        }
+      }
+    }
+  }
+}
+.loading-indicator {
+  background: url('/img/loading-indicator.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+}
+.text-icon {
+  margin-right: 10px;
+  i {
+    margin-right: 3px;
+  }
+}
+.lightbox {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100%;
+  transition: bottom 0.218s ease;
+  background-color: fade(@gray-lighter, 80);
+  z-index: @zindex-navbar-fixed + 9;
+  cursor: pointer;
+
+  .content {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid @gray-light;
+    padding: 3px;
+    background-color: @background-color-default;
+    box-shadow: 0 0 15px 5px fade(#000, 50);
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    background-color: @background-color-default;
+  }
+
+  &.open {
+    bottom: 0;
+  }
+}
+figure {
+  &.clickable {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::after {
+      width: 78px;
+      height: 78px;
+      top: -39px;
+      right: -39px;
+      z-index: 1;
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: rgba(21,92,181,.9);
+      transform: rotateZ(45deg);
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 1px;
+      right: 1px;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      content: '\e140';
+      z-index: 2;
+      color: #fff;
+      transition: font-size .128s ease,top .128s ease,right .128s ease,width .128s ease,height .128s ease;
+    }
+
+    >span {
+      max-width: 100%;
+      border: 1px solid #155cb5;
+      padding: 3px;
+      display: inline-block;
+      margin: auto;
+
+
+      img {
+        margin: auto;
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+g#cawemo, g#modeler, g#cockpit, g#admin, g#optimize, g#tasklist, g#workflow-engine, g#decision-engine {
+  pointer-events: bounding-box;
+
+  &:hover {
+    path,polygon {
+      cursor: pointer;
+    }
+    > g {
+      filter: url(#shadow);
+      cursor: pointer;
+    }
+  }
+}
+[role=columnheader] {
+  cursor: pointer;
+}
+.left-line {
+  border-left: 1px solid #ccc;
+}
+
+.full-width.light-green  {
+  background:#14d890 ;
+  color: white;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+    .hbspt-form .hs-button {
+      border:solid 1px white;
+      background: transparent;
+      background-color: transparent;
+  }
+
+}

@@ -1,0 +1,34 @@
+{{$sectionVars := index .Site.Data .Page.Section }}
+{{$curLink := string .Permalink }}
+{{$labels := index $sectionVars.subnavigation.Names .Site.LanguageCode }}
+{{$links := index $sectionVars.subnavigation.Links .Site.LanguageCode }}
+{{$slug := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+
+<div class="product subnavigation with-nav {{if $sectionVars.subnavigation.Title}}large{{end}} {{ .Params.mycontent }} ">
+  <div class="container">
+    {{if $sectionVars.subnavigation.Title}}
+    <h1 class="light text-center lead">{{index $sectionVars.subnavigation.Title .Site.LanguageCode}}</h1>
+    {{end}}
+
+    <ul class="nav nav-underlined-tabs">
+      <li class="scroll-left"><a href="#"><i class="glyphicon glyphicon-menu-left"></i></a></li>
+      <li class="scroll-left"><a href="#">{{$slug}}</a></li>
+
+      {{$subnav_labels := index $labels $slug }}
+      {{$subnav_links := index $links $slug }}
+
+      {{ range $index, $val := $subnav_labels }}
+
+        {{ $link := string (index $subnav_links $index | absLangURL) }}
+
+        <li class="{{if eq $curLink $link}} active {{ end }}">
+          <a href="{{$link}}">{{ . }}</a>
+        </li>
+
+      {{ end }}
+
+      <li class="scroll-right"><a href="#"><i class="glyphicon glyphicon-menu-right"></i></a></li>
+    </ul>
+
+  </div>
+</div>

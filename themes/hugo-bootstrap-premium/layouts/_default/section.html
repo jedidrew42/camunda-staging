@@ -1,0 +1,22 @@
+{{ partial "head" . }}
+
+{{ if .Params.showSubNav }}
+{{ partial "modules/page/subnavigation" . }}
+{{ end }}
+
+{{ if .Params.showSubNavCustom }}
+{{ partial "modules/page/subnavigation-custom" . }}
+{{ end }}
+
+{{ if .Params.showProductSubnav }}
+{{ partial "modules/page/product-subnav" . }}
+{{ end }}
+
+<div id="main-content" class="container">
+  {{ .Content }}
+  {{ if .Params.contact }}
+    {{ partial "modules/contact-form" . }}
+  {{ end }}
+</div>
+
+{{ partial "foot" . }}

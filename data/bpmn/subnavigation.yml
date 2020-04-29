@@ -1,0 +1,22 @@
+Names:
+  de:
+    - "Tutorial"
+    - "Reference"
+    - "Examples"
+    - "Tool"    
+  en:
+    - "Tutorial"
+    - "Reference"
+    - "Examples"
+    - "Tool"    
+Links:
+  de:
+    - "/bpmn/"
+    - "/bpmn/reference/"
+    - "/bpmn/examples/"
+    - "/bpmn/tool/"
+  en:
+    - "/bpmn/"
+    - "/bpmn/reference/"
+    - "/bpmn/examples/"
+    - "/bpmn/tool/"

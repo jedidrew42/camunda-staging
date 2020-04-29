@@ -1,0 +1,52 @@
+<h2 class="lead light text-center">{{.Params.headline}}</h2>
+<ul class="row cards special">
+  {{ $customerVars := index .Site.Data "landing-page" }}
+  {{ range $key, $value := (index $customerVars "customers")}}
+  <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12 square">
+		  <div class="card-container">
+			 <div class="card">
+				<div class="card-figure">
+					 <a href="/case-studies/{{$key}}/">
+						  <img class="img-responsive" src="{{$value}}" alt="Logo $key">
+					 </a>
+				</div>
+			 </div>
+			 </div>
+		</li>
+  </li>
+  {{end}}
+	<div class="clearfix"></div>
+</ul>
+<hr>
+<div class="row">
+  <!-- repeat per customer-->
+  <div class="col-xs-6">
+	 <div class="row">
+		<div class="col-xs-4">
+		  <img class="img img-responsive img-circle" src="/img/home/joerg-sauer.jpg" alt="Jörg Sauer - Allianz"/>
+		</div>
+		<div class="col-xs-8 left-line">
+			 <img src="/img/home/allianz.svg" height="40" alt="Allianz Logo" style="margin-bottom: 15px;"/>
+			 <p><strong>Jörg Sauer<br> Head of Application Development</strong></p>
+			 <p>
+				We have never once questioned our decision to adopt Camunda BPM as a platform and make Camunda our BPM partner. Our developers could implement all necessary specifications very quickly. Our transition to the BPM world was successful and without any problems.
+			 </p>
+		</div>
+	 </div>
+  </div>
+  <!-- repeat per customer-->
+  <div class="col-xs-6">
+	 <div class="row">
+		<div class="col-xs-4">
+		  <img class="img img-responsive img-circle" src="/img/home/tobias-mohr.jpg" alt="Tobias Mohr"/>
+		</div>
+		<div class="col-xs-8 left-line">
+			 <img src="https://images.ctfassets.net/vpidbgnakfvf/49xJbX9bDGo64ygo4QYg6u/4ea3ec629881582d409fe02241752557/lufthansa-technik.svg" height="40" alt="Tobias Mohr - Lufthansa Technik" style="margin-bottom: 15px;"/>
+			 <p><strong>Tobias Mohr<br> Team Lead IT Projects and Systems</strong></p>
+			 <p>
+				In Camunda BPM we found a lean and stable platform for our BPM/SOA initiatives taking place in a complex process environment. We could verify both the performance and reliability of Camunda BPM in several projects and therefore know that we made the right decision.
+			 </p>
+		</div>
+	 </div>
+  </div>
+</div>

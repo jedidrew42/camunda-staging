@@ -1,0 +1,16 @@
+{
+  "customers": {
+    "allianz-indonesia":"https://images.ctfassets.net/vpidbgnakfvf/suewkNyaVa8UMo864CWyM/70723e09421e938f45befcb827e7b5fc/allianz.svg",
+    "warner-music":"https://images.ctfassets.net/vpidbgnakfvf/2ocZ3q2ssY6g6eswY66WuW/91164df3f8c88aa2ed3206d1bea3d85d/warner-music.svg",
+    "universal-music":"https://images.ctfassets.net/vpidbgnakfvf/3ppWo94JvOIEim6cIkwYaO/1d092bd7c0f543f69075bc929ebcb0a5/universal.svg",
+    "o2-slovakia":"https://images.ctfassets.net/vpidbgnakfvf/6Pgl4mqQo0KEmuUSuAQ8aq/e871484476314fdab370cf81e5ee083b/o2.svg",
+    "deutsche-telekom":"https://images.ctfassets.net/vpidbgnakfvf/53OjB4Jw5qcsekku0WM2S0/f3633ed74e9799a77bab12b453cd8d23/telecom.svg",
+    "red-bull":"https://images.ctfassets.net/vpidbgnakfvf/1SueN9Tx1WGkiMcIwqowe2/37d385fa46d3f79e240c127ba623e911/red-bull.svg",
+    "deutsche-bahn":"https://images.ctfassets.net/vpidbgnakfvf/4RbHfV1H2g2y4YkomKAkQ0/51122dd44e8405f3b5435bf265de2a5a/db.svg",
+    "lufthansa":"https://images.ctfassets.net/vpidbgnakfvf/49xJbX9bDGo64ygo4QYg6u/4ea3ec629881582d409fe02241752557/lufthansa-technik.svg",
+    "zalando":"https://images.ctfassets.net/vpidbgnakfvf/3Bxjm8VtYc4O2uKekaW244/48711a7a531dbc2ecdb10e4c0f13f097/zalando.svg",
+    "total":"https://images.ctfassets.net/vpidbgnakfvf/3xGxbn3vAAocy44wWomeMo/0b4004d84b81d61f5522a3f05b5eda03/total-1.svg",
+    "steelcase":"https://images.ctfassets.net/vpidbgnakfvf/1p5yML8EPuc2I2c2soIQAS/f09ed572006341678cf7b59fc3a276b1/steelcase.svg",
+    "generali-germany":"https://images.ctfassets.net/vpidbgnakfvf/2qHdPwpdrmmYQioS6OguC4/171c6c8c082c766aa53a177e5014ece5/generali.svg"
+  }
+}

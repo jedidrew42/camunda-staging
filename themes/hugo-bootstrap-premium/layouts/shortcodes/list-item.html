@@ -1,0 +1,38 @@
+<section class="page-section list-item-bullets">
+      <header>
+        <h2 class="light lead" {{if .Params.id}}id="{{.Params.id}}"{{end}}>{{.Params.title}}</h2>
+      </header>
+      <div class="row">
+        <div class="{{if .Params.video_int}}col-md-5{{else}}col-md-6{{end}}">
+          <p>{{.Inner}}</p>
+          {{if .Params.link_label}}
+          <p style="margin-top:30px">
+            <a href="{{.Params.link}}" class="btn btn-primary">{{.Params.link_label}}</a>
+          </p>
+          {{end}}
+        </div>
+        <div class="{{if .Params.video_int}}col-md-7{{else}}col-md-6{{end}}">
+          <center>
+            {{if .Params.video}}
+
+            <iframe width="560" height="315" src="{{.Params.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            {{end}}
+            {{if .Params.img_clickable}}
+            <figure class="image clickable">
+              <span>
+            {{end}}{{if .Params.video_int}}{{else}}
+            <img src="{{(.Params.img)}}" style="width:{{.Params.img_width}}"{{if .Params.img_shadow}} class="shadow"{{end}}/>
+            {{if .Params.img_clickable}}
+              </span>
+            </figure>
+            {{end}}{{end}}
+            {{if .Params.video_int}}
+            <video width="100%" controls>
+              <source src="{{(.Params.video_int)}}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            {{end}}
+          </center>
+        </div>
+    </div>
+</section>

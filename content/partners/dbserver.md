@@ -1,0 +1,19 @@
+---
+title: "DBServer Workflow Automation Services | Camunda BPM"
+description: "Learn more about our trusted implementation partners, DBServer. Camunda is the leader for workflow automation & business process management. Get your 30 day trial today. "
+date: 2017-10-25T10:39:22+02:00
+draft: false
+contact: true
+contacthidden: true
+mycontent: static
+---
+{{<partner-single
+company="DBServer"
+type="si"
+website="http://www.dbserver.com.br"
+countrycode="BR"
+city="São Paulo "
+description="<p>Flexible, Organized and Creative Software Development Process</p><p>DBServer&rsquo;s Software Factory aims to create quality software in line with client&rsquo;s needs, using the most appropriate technology for each project.&nbsp;<br />Through agile methodologies, with CMMI L2 and MPS.BR E, DBServer develops robust, scalable, adaptable and quality products. Focused on meeting client&rsquo;s business needs, our software supports project&rsquo;s governance, controlling deadlines, costs and service agreement levels.</p><p>DBServer personalizes the process of delivering to client needs, considering:</p><p>&bull; &nbsp;Subcontracting Models<br />&bull; &nbsp;Profiles and Roles<br />&bull; &nbsp;Service Level Agreements<br />&bull; &nbsp;Software Develop Life Cycle<br />&bull; &nbsp;Integrated Qualification and Certification Process<br />&bull; &nbsp;Change Requests Management<br />&bull; &nbsp;On-Going Support and Service Orders<br />&bull; &nbsp;Governance<br />&bull; &nbsp;Account Delivery Process</p><p>Software Process Improvement</p><p>Software Process Improvement, or SPI, has been the focus of several software industry initiatives focused on improving productivity and quality, as well as lowering costs of organizations that depend on systems development. DBServer offers a set of solutions and products based on implementing a development infrastructure capable of supporting company&rsquo;s software projects in a controlled way and with certain levels of maturity.</p><p>DBServer also offers Consultancy Services, Mentoring and Training in:</p><p>&bull; &nbsp;Project management<br />&bull; &nbsp;Agile Coach<br />&bull; &nbsp;Automated software processes and testing<br />&bull; &nbsp;Software Engineering methods and techniques<br />&bull; &nbsp;Product design and inception<br />&bull; &nbsp;Requirements management<br />&bull; &nbsp;Software estimates<br />&bull; &nbsp;Configuration management</p><p><br />Flexible, Agile and Proactive software Testing Services.</p><p>The DBServer TestCenter is an operational unit specialized in quality control and software testing, with facilities and certified team for software quality assurance, acting outside projects in order to ensure quality approval for clients&rsquo; systems.<br />With more than 18 years&rsquo; experience in specific software testing projects, the TestCenter provides technical support and specialized work processes to attend major accounts, such as Banrisul, Cia de Petr&oacute;leo Ipiranga, Lojas Renner, Paquet&aacute;, Randon Cons&oacute;rcios, Sicredi and Visanet. Our clients portfolio also includes important international companies like Dell, HP and Sonae/Tlantic, for which DBServer provides software qualification services for their units abroad.</p><p>Our services include complete system testing lifecycle, considering:</p><p>&bull; &nbsp;Facilities and structure for remote software qualification<br />&bull; &nbsp;Planning, defining and executing tests<br />&bull; &nbsp;Automated tests<br />&bull; &nbsp;Load and performance assessment for integrated systems<br />&bull; &nbsp;Consultancy and training in software qualification methods<br />&bull; &nbsp;Code review<br />&bull; &nbsp;Customizing tools for white and black-box testing<br />&bull; &nbsp;Systems certification</p>"
+siregion="na"
+level="basic"
+logo="//images.ctfassets.net/vpidbgnakfvf/2Mk19C5up2YsmUUK6Y2wU/4c9745d6e5a6d18cbb94c1ef820ecae7/DBServer.png">}}

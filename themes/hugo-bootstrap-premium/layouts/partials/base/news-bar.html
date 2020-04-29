@@ -1,0 +1,41 @@
+{{ if eq .Site.LanguageCode "en"}}
+	{{ .Scratch.Set "logo" .Site.Params.newsBar.en.logo }}
+	{{ .Scratch.Set "title" .Site.Params.newsBar.en.title }}
+	{{ .Scratch.Set "subtitle" .Site.Params.newsBar.en.subtitle }}
+	{{ .Scratch.Set "btn" .Site.Params.newsBar.en.btn }}
+	{{ .Scratch.Set "btn_link" .Site.Params.newsBar.en.btn_link }}
+{{ else if eq .Site.LanguageCode "de"}}
+	{{ .Scratch.Set "logo" .Site.Params.newsBar.de.logo }}
+	{{ .Scratch.Set "title" .Site.Params.newsBar.de.title }}
+	{{ .Scratch.Set "subtitle" .Site.Params.newsBar.de.subtitle }}
+	{{ .Scratch.Set "btn" .Site.Params.newsBar.de.btn }}
+	{{ .Scratch.Set "btn_link" .Site.Params.newsBar.de.btn_link }}
+{{end}}
+
+
+<div class="news-bar color-{{.Site.Params.newsBar.color}}" {{if .Site.Params.newsBar.small}}data-size="small"{{end}}>
+	<div class="container">
+		<div class="news-bar__row">
+
+			{{ if and (ne .Site.Params.newsBar.small true) (ne (.Scratch.Get "logo") "") }}
+				<div class="news-bar__logo">
+					<img src='{{ .Scratch.Get "logo" }}' width="100%" />
+				</div>
+			{{end}}
+
+			<div class="news-bar__text">
+				<h5>{{ .Scratch.Get "title" }}</h5>
+
+				{{ if and (ne .Site.Params.newsBar.small true) (ne (.Scratch.Get "subtitle") "")}}
+					<p>{{ .Scratch.Get "subtitle" }}</p>
+				{{end}}
+			</div>
+
+			<div class="news-bar__cta">
+				<a href='{{ .Scratch.Get "btn_link" }}' class="btn news-bar__btn">{{ .Scratch.Get "btn" }}</a>
+			</div>
+
+			<div class="news-bar__close">x</div>
+		</div>
+	</div>
+</div>

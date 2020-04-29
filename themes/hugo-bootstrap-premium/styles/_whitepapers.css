@@ -1,0 +1,19 @@
+.whitepapers .header {
+  padding-top: 40px;
+  background-color: #f2f7fd;
+}
+.whitepapers .header h1 {
+  margin-bottom: 40px;
+}
+.whitepapers .header img {
+  width: 70%;
+}
+.whitepapers .card-container .card .card-figure {
+  height: 100%;
+}
+.whitepapers .card-container .card .btn-wrapper {
+  margin-top: 30px;
+}
+.whitepapers .whitepapers-detail {
+  margin-bottom: 100px;
+}

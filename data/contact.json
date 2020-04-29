@@ -1,0 +1,92 @@
+{
+  "form": {
+    "de": {
+      "hubspotForm": "858bc1db-03ea-4153-9f6c-b6b93cc6d52e",
+      "hubspotFormDownload": "186259f3-bbc4-4a39-bb7c-724595c8957b",
+      "hubspotProductUpdateForm": "2d80f8fe-6c00-4db9-ba9b-574e847fd01b",
+      "hubspotFormCloud": "9b21ad53-63bd-4686-bdc6-ba32d79711c1",
+      "title": "Kontaktieren Sie uns",
+      "titleCloud": "Kontaktieren Sie uns",
+      "titleSub": "Gern unterstützen wir Ihre Evaluierung und machen Ihnen ein Angebot.",
+      "titleSubCloud": "Gern beantworten wir Ihre Camunda Cloud Fragen",
+      "titleDemo": "Sprechen Sie mit einem Experten",
+      "titleDemoSub": "Entdecken Sie wie Camunda ihr Unternehmen unterstützen kann",
+      "firstname": "Vorname",
+      "lastname": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "usage": "Nutzen Sie bereits Camunda?",
+      "usageOptions": [
+        {"not at all":"überhaupt nicht"},{"we're evaluating":"wir evaluieren noch"},{"we're developing":"wir entwickeln gerade"},{"we're in production":"ja, in Produktion"}
+      ],
+      "company": "Firma",
+      "jobdesc": "Mein Aufgabengebiet",
+      "jobdescOptions": [
+        {"Head of Department":"Abteilungsleitung"},{"Business Analyst":"Business Analyse"},{"CxO":"CxO / Geschäftsleitung"},{"Project Manager":"Projektleitung"},{"Software Architect":"Software Architektur"},{"Software Developer":"Software Entwickler"},{"Other":"Sonstiges"},{"Team Lead":"Teamleitung"}
+      ],
+      "industry": "Branche",
+      "industryOptions": [
+        {"Consulting":"Beratung"},{"Insurance":"Versicherungen"},{"Finance":"Finanzdienstleistungen"},{"Public Administration":"Öffentliche Verwaltung"},{"Software Vendor":"Software-Hersteller"},{"Telecommunication":"Telekommunikation"},{"Other":"Sonstiges"}
+      ],
+      "employees": "Anzahl der Mitarbeiter",
+      "employeesOptions": [
+        {"less than 20":"unter 20"},{"21 - 100":"21 - 100"},{"101 - 1000":"101 - 1,000"},{"1001 - 10000":"1.001 - 10.000"},{"more than 10000":"über 10.000"}
+      ],
+      "developers": "Anzahl der Entwickler",
+      "developersOptions": [
+        {"None":"keine"},{"1-5":"1-5"},{"6-10":"6-10"},{"11-20":"11-20"},{"more than 20":"über 20"}
+      ],
+      "download_access": "Download-Zugriff erhalten",
+      "download_success": "Wir haben Ihnen eine Email mit den Zugangsdaten geschickt.",
+      "message": "Ihre Nachricht - Wie können wir Ihnen helfen?",
+      "submit": "Senden",
+      "successMessage": "Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.",
+      "validationerror": "Sie müssen mindestens zwei Buchstaben eingeben.",
+      "emailvalidationerror": "Sie müssen eine valide E-Mail Adresse eingeben."
+    },
+    "en": {
+      "hubspotForm": "0fdb7d1c-bf22-42c1-96e6-f068ab91a9ed",
+      "hubspotFormDownload": "df491aee-028b-4d80-b8da-1090ce6be452",
+      "hubspotProductUpdateForm": "29617fe7-4e3d-4f20-bef0-eaa3cfbde5aa",
+      "hubspotFormCloud": "e4b53ea1-5e0c-4ed4-a250-2d9a5aa8c643",
+      "title": "Contact us",
+      "titleCloud": "Contact us",
+      "titleSub": "Get a quote, evaluation assistance or anything else that is on your mind.",
+      "titleSubCloud": "Questions about Camunda Cloud? We're happy to help.",
+      "titleDemo": "Talk to an Expert",
+      "titleDemoSub": "Discover how Camunda can help your business",
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "usage": "Already using Camunda?",
+      "usageOptions": [
+        {"not at all":"not at all"},{"we're evaluating":"we're evaluating"},{"we're developing":"we're developing"},{"we're in production":"we're in production"}
+      ],
+      "company": "Company",
+      "jobdesc": "My Job Description",
+      "jobdescOptions": [
+        {"Business Analyst":"Business Analyst"},{"CxO":"CxO"},{"Head of Department":"Head of Department"},{"Project Manager":"Project Manager"},{"Software Architect":"Software Architect"},{"Software Developer":"Software Developer"},{"Team Lead":"Team Lead"},{"Other":"Other"}
+      ],
+      "industry": "Company: Industry",
+      "industryOptions": [
+        {"Consulting":"Consulting"},{"Insurance":"Insurance"},{"Finance":"Finance"},{"Public Administration":"Public Administration"},{"Software Vendor":"Software Vendor"},{"Telecommunication":"Telecommunication"},{"Other":"Other"}
+      ],
+      "employees": "Company: # Employees",
+      "employeesOptions": [
+        {"less than 20":"less than 20"},{"21 - 100":"21 - 100"},{"101 - 1000":"101 - 1,000"},{"1001 - 10000":"1,001 - 10,000"},{"more than 10000":"more than 10,000"}
+      ],
+      "developers": "Company: # Developers",
+      "developersOptions": [
+        {"None":"None"},{"1-5":"1-5"},{"6-10":"6-10"},{"11-20":"11-20"},{"more than 20":"more than 20"}
+      ],
+      "download_access": "Get Download Access",
+      "download_success": "We have sent you an email with your download credentials.",
+      "message": "Your Message - How can we support you?",
+      "submit": "Submit",
+      "successMessage": "Thank you for your message. We will contact you shortly.",
+      "validationerror": "Please enter at least 2 characters.",
+      "emailvalidationerror": "Please enter a valid E-Mail address."
+    }
+  }
+}

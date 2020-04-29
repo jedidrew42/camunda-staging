@@ -1,0 +1,34 @@
+<div class="full-width dark-bg highlight-visual">
+	<div class="container">
+		<div class="row text-center">
+			<h1 class="light">{{.Params.title}}</h1>
+
+			{{if len .Inner}}
+			<div class="col-md-push-2 col-md-8">
+				<p class="light lead">{{.Inner}}</p>
+				{{if or .Params.btn .Params.btn2}}
+				<p>
+					{{if .Params.btn}}
+						<a class=" btn btn-lg {{if .Params.btntype}}{{.Params.btntype}}{{else}}btn-primary{{end}}" href="{{.Params.btnlink}}">{{.Params.btn}}</a>
+					{{end}}
+
+					{{if .Params.btn2}}
+						<a class="btn btn-lg {{if .Params.btn2type}}{{.Params.btn2type}}{{else}}btn-default{{end}}" href="{{.Params.btn2link}}">{{.Params.btn2}}</a>
+					{{end}}
+				</p>
+				{{end}}
+			</div>
+			{{end}}
+		</div>
+	</div>
+</div>
+
+<div class="highlight-visual-img text-center">
+	<div class="img-wrapper" {{if .Params.svg}}style="width:{{.Params.svg_width}}" {{end}}>
+		{{if .Params.svg}}
+		<figure {{if .Params.svgid}}id="{{.Params.svgid}}" {{end}}>
+			{{ readFile (print "static/svg/" (.Params.svg)) | safeHTML }}
+		</figure>
+		{{else}}<img src="/svg/{{.Params.img}}" width:{{.Params.svg_width}} />{{end}}
+	</div>
+</div>

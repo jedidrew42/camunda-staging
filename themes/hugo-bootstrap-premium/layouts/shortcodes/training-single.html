@@ -1,0 +1,613 @@
+<div class="training">
+  {{$sectionVars := index .Site.Data .Page.Section}}
+  {{$i18nDetail := index $sectionVars.training.detail .Site.LanguageCode}}
+  <div class="training-detail" data-i18n="{{$i18nDetail | jsonify }}" data-training='{"name":"{{.Params.name}}","nameDe":"{{.Params.namede}}"}'>
+    <div class="header text-center">
+      <h1 class="light lead">{{ if eq .Site.LanguageCode "de"}}{{.Params.namede}}{{else}}{{.Params.name}}{{end}}</h1>
+      <img src="/svg/services/training.svg" width="160px">
+      <p>
+        <a class="btn btn-primary" href="#contact">{{$i18nDetail.requestOnsiteBtn}}</a>
+        <a class="btn btn-primary" href="#training-dates">{{$i18nDetail.dates}}</a>
+      </p>
+    </div>
+    <div class="overview-table">
+      <div class="text-center">
+        <h4>{{$i18nDetail.targetGroup}}:</h4>
+        <p>{{.Params.targetgroup}}</p>
+      </div>
+      <div class="text-center">
+        <h4>{{$i18nDetail.duration}}:</h4>
+        <p>{{.Params.duration}}</p>
+      </div>
+      <div class="text-center">
+        <h4>{{$i18nDetail.certificate}}:</h4>
+        <p>{{.Params.certificate}}</p>
+      </div>
+      <div class="text-center">
+        <h4>{{$i18nDetail.prerequisites}}:</h4>
+        <p>{{.Params.prerequisites}}</p>
+      </div>
+      <div class="text-center">
+        <h4>{{$i18nDetail.pricing}}:</h4>
+        <p>{{.Params.pricing}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <h3 class="light">{{$i18nDetail.courseOverview}}</h3>
+        <div class="content">{{.Params.courseoverview | markdownify}}</div>
+        <h3 class="light">{{$i18nDetail.courseGoals}}</h3>
+        <div class="content">{{.Params.coursegoals | markdownify}}</div>
+      </div>
+      <div class="col-xs-6">
+        <h3 class="light">{{$i18nDetail.courseAgenda}}</h3>
+        <div class="content">{{.Params.agenda | markdownify }}</div>
+      </div>
+    </div>
+    <!--<div class="dates" id="training-dates"></div>-->
+    <div id="training-dates">
+        <h2 class="light lead">{{ if eq .Site.LanguageCode "de"}}Termine{{else}}Dates{{end}}</h2>
+    <!-- Begin Overview Courses -->
+{{ if eq .Params.name "Camunda BPM Foundation"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+  <tr>
+    <td>Camunda BPM Foundation</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Fri, Jun 5, 2020 10:00 AM</td>
+    <td>Fri, Jun 6, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-foundation-tickets-82937134201" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM Foundation</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Wed, Sep 23, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-foundation-tickets-83146723087" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM Foundation</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Wed, Sep 23, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-foundation-tickets-83149184449" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM Foundation</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Fri, Dec 11, 2020 10:00 AM</td>
+    <td>Fri, Dec 11, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-foundation-tickets-83179918375" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+{{ if eq .Params.namede "OCEB 2 Fundamental Vorbereitungskurs"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+  <tr>
+    <td>OCEB 2 Fundamental Vorbereitungskurs</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Thurs, Jun 18, 2020 10:00 AM</td>
+    <td>Thurs, Jun 18, 2020 3:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/oceb-2-fundamental-vorbereitungskurs-tickets-82942604563" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>OCEB 2 Fundamental Vorbereitungskurs</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Thurs, Dec 17, 2020 10:00 AM</td>
+    <td>Fri, Dec 18, 2020 3:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/oceb-2-fundamental-vorbereitungskurs-tickets-83173015729" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+<!-- End Overview Courses -->
+<!-- Begin Modeling Courses -->
+{{ if eq .Params.name "BPMN 2.0 Training"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+  <tr>
+  <td>BPMN 2.0 Remote Training</td>
+   <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+   <td>Mon, May 4, 2020 10:00 AM</td>
+   <td>Fri, May 8, 2020 4:00 PM</td>
+   <td>Remote - ET</td>
+   <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-94153051311" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>BPMN 2.0 Training Remote</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, May 11, 2020 9:00 AM</td>
+    <td>Fri, May 15, 2020 3:00 PM</td>
+    <td>Remote - CEST</td>
+    <td><a href="https://www.eventbrite.com/e/bpmn-20-training-remote-tickets-102898676712" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0 Remote</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, May 11, 2020 9:00 AM</td>
+    <td>Fri, May 15, 2020 3:00 PM</td>
+    <td>Remote - CEST</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-remote-tickets-82796507583" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+	<tr>
+    <td>BPMN 2.0 Training</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tue, Jun 9, 2020 10:00 AM</td>
+    <td>Thurs, Jun 11, 2020 4:00 PM</td>
+    <td>Denver</td>
+    <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-94130919113" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Jun 15, 2020 10:00 AM</td>
+    <td>Wed, Jun 17, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-82939350831" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>BPMN 2.0 Training</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Jul 13, 2020 10:00 AM</td>
+    <td>Wed, Jul 15, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-82947994685" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+   <td>BPMN 2.0 Training</td>
+   <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+   <td>Tue, Aug 4, 2020 10:00 AM</td>
+   <td>Thurs, Aug 6, 2020 4:00 PM</td>
+   <td>Denver</td>
+   <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-94153051311" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Aug 24, 2020 10:00 AM</td>
+    <td>Wed, Aug 26, 2020 4:00 PM</td>
+    <td>Zürich / SGO</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-61286695155" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>BPMN 2.0 Training</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Sep    21, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-83132695129" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Sep 21, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-83133226719" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+   <td>BPMN 2.0 Training</td>
+   <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+   <td>Tue, Oct 6, 2020 10:00 AM</td>
+   <td>Thurs, Oct 8, 2020 4:00 PM</td>
+   <td>New York</td>
+   <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-94365288117" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+   <td>BPMN 2.0 Training</td>
+   <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+   <td>Tue, Oct 6, 2020 10:00 AM</td>
+   <td>Thurs, Oct 8, 2020 4:00 PM</td>
+   <td>Denver</td>
+   <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-95246796733" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Oct 26, 2020 10:00 AM</td>
+    <td>Thurs, Oct 28, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-83165057927" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+   <td>BPMN 2.0 Training</td>
+   <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+   <td>Tue, Nov 3, 2020 10:00 AM</td>
+   <td>Thurs, Nov 5, 2020 4:00 PM</td>
+   <td>New York</td>
+   <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-94369759491" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>BPMN 2.0 Training</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Nov 9, 2020 10:00 AM</td>
+    <td>Wed, Nov 11, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/bpmn-20-training-tickets-83168173245" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN 2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Nov 23, 2020 10:00 AM</td>
+    <td>Wed, Nov 25, 2020 4:00 PM</td>
+    <td>Zürich / SGO</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-61289640966" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs BPMN    2.0</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Dec    7, 2020 10:00 AM</td>
+    <td>Wed, Dec 9, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-bpmn-20-tickets-83174869273" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+{{ if eq .Params.name "DMN Training"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+  <tr>
+    <td>Praxiskurs DMN</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Thurs, Jun 18, 2020 10:00 AM</td>
+    <td>Thurs, Jun 18, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-dmn-tickets-82940612605" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>DMN Training</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Thurs, Jul 16, 2020 10:00 AM</td>
+    <td>Thurs, Jul 16, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/dmn-training-tickets-82962333573" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Praxiskurs DMN</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Thurs, Dec 10, 2020 10:00 AM</td>
+    <td>Thurs, Dec 10, 2020 6:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/praxiskurs-dmn-tickets-83175962543" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+<!-- End Modeling Courses -->
+<!-- Begin Developer Courses -->
+{{ if eq .Params.name "Camunda BPM DevOps"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+    <tr>
+      <td>Camunda BPM für DevOps</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+      <td>Tues, Sep 22, 2020 10:00 AM</td>
+      <td>Wed, Sep 23, 2020 5:00 PM</td>
+      <td>Berlin</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-devops-tickets-82798654003" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM DevOps</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>Thurs, Nov 5, 2020 10:00 AM</td>
+      <td>Fri, Nov 6, 2020 5:00 PM</td>
+      <td>Berlin</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-devops-tickets-83165808171" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+{{ if eq .Params.name "Camunda BPM for Java Developers"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+    <tr>
+      <td>Camunda BPM for Java Developers Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 04.5.2020 10:00 Uhr{{else}}Mon, May 4, 2020 10:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 08.5.2020 16:00 Uhr{{else}}Fri, May 8, 2020 4:00 PM{{end}}</td>
+      <td>Remote - ET</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-remote-tickets-101328981712" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM for Java Developers Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 11.5.2020 9:00 Uhr{{else}}Mon, May 11, 2020 9:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 15.5.2020 15:00 Uhr{{else}}Fri, May 15, 2020 3:00 PM{{end}}</td>
+      <td>Remote - CEST</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-remote-tickets-101310368038" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM in Microservice-Umgebungen Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 11.5.2020 9:00 Uhr{{else}}Mon, May 11, 2020 9:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 15.5.2020 15:00 Uhr{{else}}Fri, May 15, 2020 3:00 PM{{end}}</td>
+      <td>Remote - CEST</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-in-microservice-umgebungen-remote-tickets-101313393086" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM for Java Developers Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 11.5.2020 9:00 Uhr{{else}}Mon, May 11, 2020 9:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 15.5.2020 15:00 Uhr{{else}}Fri, May 15, 2020 3:00 PM{{end}}</td>
+      <td>Remote - SGT</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-remote-tickets-101317336882" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+	  <tr>
+      <td>Camunda BPM für Java-Entwickler Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 11.5.2020 9:00 Uhr{{else}}Mon, May 11, 2020 9:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 15.5.2020 15:00 Uhr{{else}}Fri, May 15, 2020 3:00 PM{{end}}</td>
+      <td>Remote - CEST</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-java-entwickler-remote-tickets-82794583829" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  	</tr>
+	<!--  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, May 18, 2020 10:00 AM</td>
+    <td>Wed, May 20, 2020 4:00 PM</td>
+    <td>London</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83590829421" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>-->
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tue, Jun 2, 2020 10:00 AM</td>
+    <td>Thurs, Jun 4, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-82801851567" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM für    Java-Entwickler</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Jun 22, 2020 10:00 AM</td>
+    <td>Wed, Jun 24, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-java-entwickler-tickets-82945597515" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+	<tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tue, Jul 7, 2020 10:00 AM</td>
+    <td>Thurs, Jul 9, 2020 4:00 PM</td>
+    <td>Denver</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-94148198797" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+	<tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Aug 3, 2020 10:00 AM</td>
+    <td>Wed, Aug 5, 2020 4:00 PM</td>
+    <td>London</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83593708031" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+	<tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Aug 3, 2020 10:00 AM</td>
+    <td>Wed, Aug 5, 2020 4:00 PM</td>
+    <td>London</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83593708031" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM für Java-Entwickler</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Wed, Aug 26, 2020 10:00 AM</td>
+    <td>Fri, Aug 28, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-java-entwickler-tickets-82963340585" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM für Java-Entwickler</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Sep 21, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-java-entwickler-tickets-83135034125" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Sep 21, 2020 10:00 AM</td>
+    <td>Wed, Sep 23, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83138737201" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Oct 19, 2020 10:00 AM</td>
+    <td>Wed, Oct 21, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83151545511" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tues, Oct 20, 2020 10:00 AM</td>
+    <td>Thurs, Oct 22, 2020 4:00 PM</td>
+    <td>New York City</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-94367039355" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tues, Nov 3, 2020 10:00 AM</td>
+    <td>Thurs, Nov 5, 2020 4:00 PM</td>
+    <td>Denver</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-95566629361" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM für Java-Entwickler</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+    <td>Mon, Nov 16, 2020 10:00 AM</td>
+    <td>Wed, Nov 18, 2020 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-fur-java-entwickler-tickets-83170648649" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Tues, Nov 17, 2020 10:00 AM</td>
+    <td>Thurs, Nov 19, 2020 4:00 PM</td>
+    <td>New York City</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-94399775269" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  <tr>
+    <td>Camunda BPM for Java Developers</td>
+    <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+    <td>Mon, Dec 14, 2020 10:00 AM</td>
+    <td>Wed, Dec 16, 2020, 4:00 PM</td>
+    <td>Berlin</td>
+    <td><a href="https://www.eventbrite.com/e/camunda-bpm-for-java-developers-tickets-83176897339" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+  </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+{{ if eq .Params.name "Camunda BPM and Microservices"}}
+<table class="table table-striped" style="margin-bottom:20px">
+  <thead>
+    <tr>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Training{{else}}Event{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Sprache{{else}}Language{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Von{{else}}Begin{{end}}</th>
+  	  <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Bis{{else}}End{{end}}</th>
+      <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Ort{{else}}City{{end}}</th>
+	    <th role="columnheader">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book{{end}}</th>
+    </tr>
+  </thead>
+  <tbody class="">
+    <tr>
+      <td>Camunda BPM and Microservices Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 04.5.2020 10:00 Uhr{{else}}Mon, May 4, 2020 10:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 08.5.2020 16:00 Uhr{{else}}Fri, May 8, 2020 4:00 PM{{end}}</td>
+      <td>Remote - ET</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-and-microservices-remote-tickets-101332606554" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM and Microservices Remote</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Mo, 11.5.2020 10:00 Uhr{{else}}Mon, May 11, 2020 10:00 AM{{end}}</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Fr, 15.5.2020 16:00 Uhr{{else}}Fri, May 15, 2020 4:00 PM{{end}}</td>
+      <td>Remote - CEST</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-and-microservices-remote-tickets-102901697748" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM and Microservices</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>Tues, Sep 15, 2020 10:00 AM</td>
+      <td>Thurs, Sep 17, 2020, 4:00 PM</td>
+      <td>New York City</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-and-microservices-tickets-95215003639" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM in Microservice-Umgebungen</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Deutsch{{else}}German{{end}}</td>
+      <td>Mon, Sep 21, 2020 10:00 AM</td>
+      <td>Wed, Sep 23, 2020, 4:00 PM</td>
+      <td>Berlin</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-in-microservice-umgebungen-tickets-83143320911" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM and Microservices</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>Mon, Sep 21, 2020 10:00 AM</td>
+      <td>Wed, Sep 23, 2020, 4:00 PM</td>
+      <td>Berlin</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-and-microservices-tickets-83144257713" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+    <tr>
+      <td>Camunda BPM and Microservices</td>
+      <td>{{ if eq .Site.LanguageCode "de"}}Englisch{{else}}English{{end}}</td>
+      <td>Tues, Dec 8, 2020 10:00 AM</td>
+      <td>Thurs, Dec 10, 2020, 4:00 PM</td>
+      <td>New York City</td>
+      <td><a href="https://www.eventbrite.com/e/camunda-bpm-and-microservices-tickets-95567586223" target="_blank" class="btn btn-primary">{{ if eq .Site.LanguageCode "de"}}Buchen{{else}}Book Now{{end}}</a></td>
+    </tr>
+  </tbody>
+</table>
+{{else}}
+{{end}}
+{{ if eq .Params.name "Activiti Migration"}}
+<p>Dates Coming Soon</p>
+{{else}}
+{{end}}
+<!-- End Developer Courses -->
+  </div>
+  </div>
+</div>

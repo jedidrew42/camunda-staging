@@ -1,0 +1,26 @@
+{
+  "Names":
+  {
+    "de":
+    ["Support",
+    "Consulting",
+    "Training"],
+  "en":
+    ["Support",
+    "Consulting",
+    "Training"]
+  },
+"Links":{
+  "de":[
+    "/de/enterprise/",
+    "/de/services/consulting/",
+    "/de/services/training/"
+  ],
+  "en": [
+    "/enterprise/",
+    "/services/consulting/",
+    "/services/training/"
+  ]
+}
+
+}

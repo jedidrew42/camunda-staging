@@ -1,0 +1,27 @@
+{{$i18nForm := index .Site.Data.contact.form .Site.LanguageCode}}
+<div class="row" id="trialform">
+	<div class="col-md-6">
+		<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script>
+			hbspt.forms.create({
+				portalId: "4513465",
+				formId: "{{$i18nForm.hubspotFormDownload}}",
+				css: "",
+				locale: "{{.Site.LanguageCode}}",
+				onFormReady: function($form) {
+	        $('input[name="website"]', $form).val(window.location.href).change();
+	      },
+	      onFormSubmit: function($form) {
+					$($form).trigger('downloadTrialRequest');
+	      },
+				target: "#eedownloadform{{.Params.type}}"
+			});
+		</script><div id="eedownloadform{{.Params.type}}" class="hbspt-form"></div>
+	</div>
+	<div class="col-md-6">
+		{{.Inner}}
+	</div>
+</div>

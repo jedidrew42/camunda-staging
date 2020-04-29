@@ -1,0 +1,70 @@
+- id: filter_by
+  translation: "Filter by"
+- id: 404error
+  translation: "404 Not Found"
+- id: 404desc
+  translation: "What you're looking for isn't here, sorry!"
+- id: 404link
+  translation: "Click here to go back home"
+- id: logoalt
+  translation: "Camunda BPM is a scalable workflow and decision automation platform"
+- id: next
+  translation: "Next"
+- id: previous
+  translation: "Previous"
+- id: backtotop
+  translation: "back to top"
+- id: readmore
+  translation: "Read more"
+- id: byauthor
+  translation: "by"
+- id: readinabout
+  translation: "Read in about {{ .ReadingTime }} min"
+- id: words
+  translation: "{{ .WordCount }} words"
+- id: latestposts
+  translation: "Latest Posts"
+- id: all
+  translation: "All"
+- id: all_levels
+  translation: "All Levels"
+- id: all_hq
+  translation: "All Countries"
+- id: all_industries
+  translation: "All Industries"
+- id: industry
+  translation: "Industry"
+- id: finance
+  translation: Finance
+- id: insurance
+  translation: Insurance
+- id: telco
+  translation: Telecommunications
+- id: utilities
+  translation: Utilities
+- id: public
+  translation: Public Sector
+- id: software
+  translation: Software
+- id: consulting
+  translation: Consulting
+- id: all_regions
+  translation: All Regions
+- id: dach
+  translation: DACH
+- id: other
+  translation: Other
+- id: region
+  translation: Region
+- id: na
+  translation: North America
+- id: latam
+  translation: Latin America
+- id: apac
+  translation: Asia Pacific
+- id: emea
+  translation: Europe and Middle East
+- id: learnmore
+  translation: Learn more
+- id: readmore
+  translation: Read more 

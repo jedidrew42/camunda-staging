@@ -1,0 +1,44 @@
+<table class="cawemo-features table editions">
+  {{ $productsVars := index .Site.Data .Page.Section }}
+  {{ $i18n := index $productsVars.cawemo .Site.LanguageCode }}
+  <tr class="head">
+    <td class="text-center"></td>
+    <td class="editions-name "><p>Free</p></td>
+    <td class="editions-name editions-name-standard enterprise-saas enterprise-prem" colspan="2"><p>Enterprise</p> <p style="font-size: 12px;">{{$i18n.enterprisehint}}</p></td>
+  </tr>
+
+  {{ range $index, $row := $i18n.features }}
+    {{ if eq $row.head true}}
+      <tr>
+       <td class="level2 header">{{$row.title}}</td>
+       <td class="free"></td>
+       <td class="enterprise-saas enterprise-prem" colspan="2"></td>
+      </tr>
+    {{ else if eq $row.cta true}}
+      <tr class="cta">
+        <td class="level3"></td>
+        <td class="check free">{{$row.free | safeHTML}}</td>
+        <td class="check enterprise-saas">{{$row.saas | safeHTML}}</td>
+        <td class="check enterprise-prem">{{$row.enterprise | safeHTML}}</td>
+      </tr>
+    {{ else }}
+      <tr>
+        <td class="level3">{{$row.title | markdownify}}</td>
+        <td class="check free">{{if and (isset $row "free") (eq $row.free true)}}<i class="glyphicon glyphicon-ok"></i>{{else if (isset $row "free")}}{{$row.free | safeHTML}}{{end}}</td>
+        <td class="check enterprise-saas">{{if and (isset $row "saas") (eq $row.saas true)}}<i class="glyphicon glyphicon-ok"></i>{{else if (isset $row "saas")}}{{$row.saas | safeHTML}}{{end}}</td>
+        <td class="check enterprise-prem">{{if and (isset $row "enterprise") (eq $row.enterprise true)}}<i class="glyphicon glyphicon-ok"></i>{{else if (isset $row "enterprise")}}{{$row.enterprise | safeHTML}}{{end}}</td>
+      </tr>
+    {{ end}}
+  {{ end }}
+</table>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    $(".cawemo-saas-js").click(function() {
+      $("[name='how_can_we_support_you_']").val("Hi Camunda,\n\nWe're interested in Cawemo Enterprise (SaaS). Please get in touch with us.\n\nKind regards").change();
+    });
+    $(".cawemo-enterprise-js").click(function() {
+      $("[name='how_can_we_support_you_']").val("Hi Camunda,\n\nWe're interested in Cawemo Enterprise (On-Premise). Please get in touch with us.\n\nKind regards").change();
+    });
+  });
+</script>

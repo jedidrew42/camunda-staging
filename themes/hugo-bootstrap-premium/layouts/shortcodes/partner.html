@@ -1,0 +1,73 @@
+<div class="partner">
+  {{ $partnerVars := index .Site.Data .Page.Section }}
+  <div class="full-width dark-bg">
+    <div class="container">
+      <div class="selects row">
+        <div class="col-md-offset-4 col-md-2">
+          <select class="form-control level">
+            <option value="">{{ i18n "all_levels" }}</option>
+            <option value="basic">Basic</option>
+            <option value="certified">Certified</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-control hq">
+            <option value="">{{ i18n "all_hq" }}</option>
+            {{ $countries := index $partnerVars.countries .Site.LanguageCode }}
+            {{ range $index, $country := $countries }}
+            <option value="{{$index}}">{{$country}}</option>
+            {{ end }}
+          </select>
+        </div>
+        <!--
+        <div class="col-md-2">
+          <select class="form-control region">
+            <option value="">{{ i18n "all_regions" }}</option>
+            <option value="dach">{{ i18n "dach" }}</option>
+            <option value="emea">{{ i18n "emea" }}</option>
+            <option value="na">{{ i18n "na" }}</option>
+            <option value="apac">{{ i18n "apac" }}</option>
+            <option value="latam">{{ i18n "latam" }}</option>
+          </select>
+        </div>
+        -->
+      </div>
+      <ul class="cards">
+          {{ $overview := index $partnerVars.overview .Site.LanguageCode }}
+          {{ $.Scratch.Set "lower_titles" (slice) }}
+          {{ range $overview}}
+            {{ $.Scratch.Add "lower_titles" (lower .company) }}
+          {{ end }}
+          {{ range sort ($.Scratch.Get "lower_titles") }}
+            {{ $lower_int := . }}
+            {{ range sort $overview "company" "asc" }}
+              {{ if eq (lower .company) $lower_int }}
+              <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12" data-partner-level="{{.level}}" data-partner-location="{{.countryCode}}" data-partner-available="{{.siRegion}}">
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-figure">
+                      <a href="{{.technicalName}}/">
+                          <img class="img-responsive" src="{{.logo}}" alt="Logo {{.company}}">
+                      </a>
+                  </div>
+                  <div class="name-wrap">
+                      <div class="name">{{.company}}</div>
+                  </div>
+                  <hr>
+                  <div class="name-wrap">
+                    <div class="name">{{.city}}, {{.countryCode}}</div>
+                  </div>
+                  <div>
+                    <a href="{{.technicalName}}/" class="btn btn-default">{{ i18n "learnmore" }}</a>
+                  </div>
+                </div>
+                </div>
+            </li>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

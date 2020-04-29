@@ -1,0 +1,16 @@
+<div class="page-section teaser">
+   <div class="container text-center">
+     <div class="row">
+       {{ $headlines := split .Params.headlines "///" }}
+       {{ $imgs := split .Params.imgs "///" }}
+       {{ $paragraphs := split .Params.paragraphs "///" }}
+       {{ range $index, $headline := $headlines }}
+       <div class="col-sm-4">
+         <img src="{{index $imgs $index}}" style="width:30%">
+         <h2>{{$headline}}</h2>
+         <p>{{(index $paragraphs $index) | markdownify}}</p>
+       </div>
+       {{ end }}
+     </div>
+   </div>
+ </div>

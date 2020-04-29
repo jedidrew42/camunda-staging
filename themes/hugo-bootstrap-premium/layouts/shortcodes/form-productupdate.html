@@ -1,0 +1,34 @@
+<div class="full-width light-green">
+  <div class="row" style="padding-top:30px;padding-bottom:30px;">
+    <div class="col-xs-12">
+      <div class="text-center">
+        <label style="font-weight: 400 !important;display: inline-block;">{{(index .Params 0)}}</label>
+        <div id="productupdate" class="hbspt-form"></div>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        {{$i18nForm := index .Site.Data.contact.form .Site.LanguageCode}}
+        <script>
+          hbspt.forms.create({
+          portalId: "4513465",
+          formId: "{{$i18nForm.hubspotProductUpdateForm}}",
+          css: "",
+          target: "#productupdate",
+          locale: "{{.Site.LanguageCode}}"
+        });
+        </script>
+          <!-- Begin MailChimp Signup Form -->
+          <!--<form action="/backend/mc/subscribe.php" method="post" id="subscribe-form" name="subscribe-form" class="form-inline validate subscribe-form" target="_blank">
+            <div id="mc_embed_signup_scroll">
+              <div class="form-group">
+                <label style="font-weight: 400 !important;" for="mce-EMAIL">{{(index .Params 0)}}</label>
+                <input type="email" placeholder="{{(index .Params 3)}}" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" required>
+                <input type="hidden" value="{{.Page.Permalink}}" name="SOURCE">
+                <input type="submit" value="{{(index .Params 1)}}" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                <span class="success-message">{{(index .Params 2)}}</span>
+              </div>
+            </div>
+          </form>-->
+          <!--End mc_embed_signup-->
+      </div>
+    </div>
+  </div>
+</div>

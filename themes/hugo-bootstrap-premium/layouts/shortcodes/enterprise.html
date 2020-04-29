@@ -1,0 +1,111 @@
+{{ $enterpriseVars := index .Site.Data .Page.Section }}
+{{ $i18n := index $enterpriseVars.overview .Site.LanguageCode }}
+
+<table class="table light enterprise" style="font-size: 18px;">
+  <tr style="border-top:none">
+    <td colspan="2" style="border-top:none"><h2 style="font-size: 25px;">{{$i18n.comparison}}</h2></td>
+    <td class="text-center" style="border-top:none"><h2 style="font-size: 25px;">{{$i18n.community}}</h2></td>
+    <td class="text-center" style="border-top:none"><h2 style="font-size: 25px;">{{$i18n.enterprise}}</h2></td>
+  </tr>
+
+  <tr>
+    <td colspan="4" style="padding-top:50px"><strong>{{$i18n.stack}}</strong></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.bpmnengine}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.dmnengine}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.modeler}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.tasklist}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td rowspan="2">{{$i18n.cockpit}}</td>
+    <td>{{$i18n.basic}}</td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+    <tr>
+    <td><a href="{{$i18n.cockpitlink}}">{{$i18n.full}}</a></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.cawemo}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.optimize}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td colspan="4" style="padding-top:50px"><strong>{{$i18n.support}}</strong></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.contractual_warranties}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.sla}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.patch_releases}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.consulting}}</td>
+    <td></td>
+    <td class="text-center"><i class="glyphicon glyphicon-remove-circle"></i></td>
+    <td class="text-center"><i class="glyphicon glyphicon-ok-circle"></i></td>
+  </tr>
+
+  <tr>
+    <td colspan="4" style="padding-top:50px"><strong>{{$i18n.getit}}</strong></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.license}}</td>
+    <td></td>
+    <td class="text-center">{{$i18n.opensource}}</td>
+    <td class="text-center">{{$i18n.agreement}}</td>
+  </tr>
+  <tr>
+    <td>{{$i18n.evaluate}}</td>
+    <td></td>
+    <td class="text-center"><a href="/download">{{$i18n.download}}</a></td>
+    <td class="text-center"><a href="/download/enterprise">{{$i18n.trial}}</a></td>
+  </tr>
+  <tr>
+    <td>{{$i18n.pricing}}</td>
+    <td></td>
+    <td class="text-center">{{$i18n.na}}</td>
+    <td class="text-center">{{$i18n.contact}}</td>
+  </tr>
+
+ </table>

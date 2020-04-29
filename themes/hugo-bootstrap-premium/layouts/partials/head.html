@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{{ "<!--[if lt IE 7]>" | safeHTML }} <html class="no-js lt-ie9 lt-ie8 lt-ie7"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if IE 7]>" | safeHTML }} <html class="no-js lt-ie9 lt-ie8"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if IE 8]>" | safeHTML }} <html class="no-js lt-ie9"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if gt IE 8]><!-->" | safeHTML }} <html class="no-js"> {{ "<!--<![endif]-->" | safeHTML }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>{{ if .Title }} {{ .Title }} {{ else }} {{ .Site.Title }}{{ end }}</title>
+  {{ partial "base/metas" . }}
+  {{ partial "base/imports" . }}
+</head>
+<body class="lang-{{ .Site.LanguageCode }}">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- News bar -->
+{{ if and (.Site.Params.newsBar.enabled) (ne .Params.hideNewsBar true) }}
+  {{ partial "base/news-bar" . }}
+{{end}}
+
+<!-- Header -->
+{{ if .Params.headless }}{{ else }}{{ partial "base/header" . }}{{end}}

@@ -1,0 +1,48 @@
+{
+	"private": true,
+	"name": "camunda.com",
+	"version": "0.0.1",
+	"description": "Camunda.Com Styles & Scripts",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "npx webpack --config webpack.config.js"
+	},
+	"setup": {
+		"target": "."
+	},
+	"dependencies": {
+		"axios": "^0.18.1",
+		"bootstrap": "^3.4.1",
+		"camunda-commons-ui": "git://github.com/camunda/camunda-commons-ui.git",
+		"detect-browser": "^2.0.0",
+		"diagram-js": "2.3.0",
+		"dmn-js": "^5.1.2",
+		"hash-handler": "^2.0.1",
+		"moment": "^2.19.1",
+		"tablesort": "^5.0.2"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^7.2.3",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-inferno": "^5.0.1",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-object-assign": "^6.22.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"css-loader": "^0.28.11",
+		"eslint": "^4.9.0",
+		"eslint-config-airbnb-base": "12.1.0",
+		"eslint-plugin-import": "2.8.0",
+		"file-loader": "^1.1.11",
+		"less": "^3.0.0",
+		"less-loader": "^4.1.0",
+		"mini-css-extract-plugin": "^0.4.2",
+		"raw-loader": "^0.5.1",
+		"style-loader": "^0.21.0",
+		"webpack": "^4.41.4",
+		"webpack-bundle-analyzer": "^3.6.0",
+		"webpack-cli": "^3.1.1"
+	}
+}

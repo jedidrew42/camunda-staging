@@ -1,0 +1,16 @@
+<div class="partner-single">
+  <div class="header text-center">
+    <img src="{{.Params.logo}}" alt="Logo {{.Params.company}}">
+    {{if .Params.city}}<p>{{.Params.city}}, {{.Params.countrycode}}</p>{{end}}
+    <p><a class="btn btn-default" href="{{.Params.website}}">Website</a></p>
+    {{if not (eq .Params.level "basic")}}<img src="/svg/partner/{{.Params.level}}.svg" style="width:150px">{{end}}
+  </div>
+  {{if .Params.description}}
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>{{.Params.description | markdownify}}</p>
+    </div>
+  </div>
+  {{end}}
+</div>

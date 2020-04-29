@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 318.7 178.8" style="enable-background:new 0 0 318.7 178.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#00A8FF;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:5,5;}
+	.st2{fill:#00A8FF;}
+	.st3{fill:none;stroke:#00A8FF;stroke-miterlimit:10;stroke-dasharray:5;}
+	.st4{fill:none;stroke:#00A8FF;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#00A8FF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M310,175.5H9.3c-2.8,0-5-2.2-5-5V8c0-2.8,2.2-5,5-5H310c2.8,0,5,2.2,5,5v162.5C315,173.2,312.8,175.5,310,175.5
+	z"/>
+<g>
+	<g>
+		<line class="st1" x1="44.4" y1="46.2" x2="95.9" y2="46.2"/>
+		<g>
+			<polygon class="st2" points="93.7,53.6 106.7,46.2 93.7,38.7 			"/>
+		</g>
+	</g>
+</g>
+<line class="st3" x1="45" y1="138.7" x2="45" y2="81.4"/>
+<line class="st3" x1="107.6" y1="138.7" x2="107.6" y2="81.4"/>
+<line class="st3" x1="271.7" y1="138.7" x2="271.7" y2="81.4"/>
+<g>
+	<g>
+		<line class="st1" x1="109.7" y1="46.2" x2="259.9" y2="46.2"/>
+		<g>
+			<polygon class="st2" points="257.7,53.6 270.7,46.2 257.7,38.7 			"/>
+		</g>
+	</g>
+</g>
+<path class="st4" d="M94.9,124.7H68.5c-2.8,0-5-2.2-5-5v-18.3c0-2.8,2.2-5,5-5h26.4c2.8,0,5,2.2,5,5v18.3
+	C99.9,122.4,97.7,124.7,94.9,124.7z"/>
+<path class="st4" d="M153.2,124.7h-26.4c-2.8,0-5-2.2-5-5v-18.3c0-2.8,2.2-5,5-5h26.4c2.8,0,5,2.2,5,5v18.3
+	C158.2,122.4,155.9,124.7,153.2,124.7z"/>
+<path class="st4" d="M260.3,124.7h-26.4c-2.8,0-5-2.2-5-5v-18.3c0-2.8,2.2-5,5-5h26.4c2.8,0,5,2.2,5,5v18.3
+	C265.3,122.4,263,124.7,260.3,124.7z"/>
+<g>
+	<g>
+		<line class="st4" x1="99.9" y1="110.5" x2="114.2" y2="110.5"/>
+		<g>
+			<polygon class="st2" points="112.7,115.8 121.7,110.5 112.7,105.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st4" x1="158.2" y1="110.5" x2="172.5" y2="110.5"/>
+		<g>
+			<polygon class="st2" points="170.9,115.8 180,110.5 170.9,105.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st4" x1="207" y1="110.5" x2="221.3" y2="110.5"/>
+		<g>
+			<polygon class="st2" points="219.8,115.8 228.8,110.5 219.8,105.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st4" x1="265.3" y1="110.5" x2="279.6" y2="110.5"/>
+		<g>
+			<polygon class="st2" points="278,115.8 287.1,110.5 278,105.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st4" points="221.3,141.3 194,141.3 194,123.4 		"/>
+		<g>
+			<polygon class="st2" points="219.8,136.1 228.8,141.3 219.8,146.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st4" x1="31.4" y1="110.5" x2="55.7" y2="110.5"/>
+		<g>
+			<polygon class="st2" points="54.2,115.8 63.3,110.5 54.2,105.3 			"/>
+		</g>
+	</g>
+</g>
+<polygon class="st5" points="180.3,110.9 194,123.4 207,110.5 207,110.2 193.3,97.7 180.3,110.5 "/>
+<g>
+	<path class="st2" d="M192.8,110.4l-3.3-4.7h1.7l2.5,3.7l2.5-3.7h1.6l-3.3,4.7l3.5,4.9h-1.7l-2.7-3.9l-2.7,3.9h-1.7L192.8,110.4z"/>
+</g>
+</svg>

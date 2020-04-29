@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "comma-dangle": 0,
+    "new-cap": 0,
+    "no-console": 0,
+    "prefer-const": 1,
+    "no-param-reassign": 0
+  },
+  "globals": {
+    "window": true,
+    "$": true,
+    "FormData": true,
+    "Cookies": true,
+    "dataLayer": true
+  }
+}

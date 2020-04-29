@@ -1,0 +1,6 @@
+{{ if .Page.Params.featured }}
+	{{ partial "modules/case-studies/featured" . }}
+{{ else }}
+	{{ partial "modules/case-studies/regular" . }}
+{{ end }}
+

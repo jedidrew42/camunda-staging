@@ -1,0 +1,296 @@
+{
+  "de": [
+    {
+      "title": "Manage Deployments",
+      "head": true
+    },
+    {
+      "title": "Inspect deployed BPMN process models and DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/deployment-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Deploy BPMN process models and DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/deployment-view/#create-deployment",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Delete (Undeploy) a BPMN process model",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/dashboard/#delete-process-definitions",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "History Cleanup View",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/cleanup/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Operate BPMN processes",
+      "head": true
+    },
+    {
+      "title": "Search for BPMN process instances by extensive criteria",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/dashboard/#search",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect current state of running BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect audit trail (history) of running and completed BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-history-views/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Suspend/resume, cancel, retry a single BPMN process instance",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/suspension/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Suspend/resume, cancel, retry batches of BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/batch/batch-operation/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Restart single or batches of BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-restart/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Add, edit, delete variables in BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-view/#add-variables",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect and retry a single failed job",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/failed-jobs/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect and retry batches of failed jobs",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/failed-jobs/#batch-retry",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Move single or batches of BPMN process instances to a different flow node",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-modification/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Migrate single or batches of BPMN process instances to a different version",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-migration/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Search and inspect open user tasks",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/tasks-dashboard/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Operate DMN decisions",
+      "head": true
+    },
+    {
+      "title": "Inspect DMN decision table executions in history",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/decision-instance-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect DMN Decision Requirements Diagrams (DRD)",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/decision-requirements-definition-view/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Live edit and update deployed DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/live-editing/",
+      "community": false,
+      "enterprise": true
+    }
+  ],
+  "en": [
+    {
+      "title": "Manage Deployments",
+      "head": true
+    },
+    {
+      "title": "Inspect deployed BPMN process models and DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/deployment-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Deploy BPMN process models and DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/deployment-view/#create-deployment",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Delete (Undeploy) a BPMN process model",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/dashboard/#delete-process-definitions",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "History Cleanup View",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/cleanup/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Operate BPMN processes",
+      "head": true
+    },
+    {
+      "title": "Search for BPMN process instances by extensive criteria",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/dashboard/#search",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect current state of running BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect audit trail (history) of running and completed BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-history-views/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Suspend/resume, cancel, retry a single BPMN process instance",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/suspension/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Suspend/resume, cancel, retry batches of BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/batch/batch-operation/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Restart single or batches of BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-restart/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Add, edit, delete variables in BPMN process instances",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-view/#add-variables",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect and retry a single failed job",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/failed-jobs/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect and retry batches of failed jobs",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/failed-jobs/#batch-retry",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Move single or batches of BPMN process instances to a different flow node",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-modification/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Migrate single or batches of BPMN process instances to a different version",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/bpmn/process-instance-migration/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Search and inspect open user tasks",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/tasks-dashboard/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Operate DMN decisions",
+      "head": true
+    },
+    {
+      "title": "Inspect DMN decision table executions in history",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/decision-instance-view/",
+      "community": true,
+      "enterprise": true
+    },
+    {
+      "title": "Inspect DMN Decision Requirements Diagrams (DRD)",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/decision-requirements-definition-view/",
+      "community": false,
+      "enterprise": true
+    },
+    {
+      "title": "Live edit and update deployed DMN decision tables",
+      "head": false,
+      "doclink": "https://docs.camunda.org/manual/webapps/cockpit/dmn/live-editing/",
+      "community": false,
+      "enterprise": true
+    }
+  ]
+}

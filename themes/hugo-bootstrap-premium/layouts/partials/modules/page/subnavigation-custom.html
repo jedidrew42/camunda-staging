@@ -1,0 +1,29 @@
+{{$sectionVars := index .Site.Data .Page.Section }}
+{{$curLink := string .Permalink }}
+{{$labels := index $sectionVars.subnavigation.Names .Site.LanguageCode }}
+{{$links := index $sectionVars.subnavigation.Links .Site.LanguageCode }}
+{{ $currentPage := . }}
+<div class="subnavigation with-nav {{if $sectionVars.subnavigation.Title}}large{{end}} {{ .Params.mycontent }} ">
+  <div class="container">
+    {{if $sectionVars.subnavigation.Title}}
+    <h1 class="light text-center lead">{{index $sectionVars.subnavigation.Title .Site.LanguageCode}}</h1>
+    {{end}}
+    <ul class="nav nav-underlined-tabs">
+      <li class="scroll-left"><a href="#"><i class="glyphicon glyphicon-menu-left"></i></a></li>
+      {{ range $index, $label := $labels }}
+      {{$link := string (index $links $index | absLangURL)}}
+      {{ $sectionLink := string ($currentPage.CurrentSection.Dir | absLangURL) }}
+      {{if $sectionVars.subnavigation.Title}}
+      <li class="{{ if eq $curLink $link}} active {{ end }}">
+        <a href="{{$link}}">{{$label | markdownify }}</a>
+      </li>
+      {{else}}
+      <li class="{{ if eq $curLink $link}} active {{ end }}{{ if eq $sectionLink $link}} active {{end}}">
+        <a href="{{$link}}">{{$label | markdownify }}</a>
+      </li>
+      {{end}}
+      {{ end }}
+      <li class="scroll-right"><a href="#"><i class="glyphicon glyphicon-menu-right"></i></a></li>
+    </ul>
+  </div>
+</div>

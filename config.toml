@@ -1,0 +1,720 @@
+baseURL = "https://camunda.com"
+languageCode = "en"
+
+DefaultContentLanguage = "en"
+canonifyurls = true
+metaDataFormat = "toml"
+title = "My New Hugo Site"
+theme = "hugo-bootstrap-premium"
+
+[params.theme]
+  name = "default"
+
+[params]
+
+  # menu for changing language. This changes languages with js and stores the choice with the help
+  # of JavaScript in a Cookie. Then the path is rewritten with pathnamereplace.js. The name of the
+  # md files needs to have the same name for each language abbreviation to work correctly. Example:
+  # showcase.en.md and showcase.sv.md. It only works if DefaultContentLanguageInSubdir = true
+  switchlang = true
+
+  # News bar section
+  [params.newsBar]
+    enabled = false    # whether or not to show the new bar
+    small = false     # If set to true, it'll show a small version of the bar
+    color = "white"   # white (default) | grey | green | blue
+
+    [params.newsBar.en]
+      title = "CamundaCon LIVE: Online Process Automation Conference"
+      subtitle = "Join us free April 23-24, 2020 from 10am – 4pm EST/ 4pm – 10pm CEST"
+      logo = "/img/camundaconlive.png"
+      btn = "Watch Now"
+      btn_link = "https://www.camundacon.com/live/"
+
+    [params.newsBar.de]
+      title = "CamundaCon LIVE: Online Process Automation Conference"
+      subtitle = "Join us free April 23-24, 2020 from 10am – 4pm EST/ 4pm – 10pm CEST"   # if set to empty it wont appear on the bar
+      logo = "/img/camundaconlive.png"       # if set to empty it wont appear on the bar
+      btn = "Watch Now"
+      btn_link = "https://www.camundacon.com/live/"
+
+[[Languages.en.menu.switchlang]]
+  name = "DE"
+  identifier = ""
+  weight = 4
+  url = "de"
+
+[[Languages.de.menu.switchlang]]
+  name = "EN"
+  identifier = ""
+  weight = 4
+  url = "en"
+
+[Languages]
+  [Languages.en]
+  weight = 1
+  copyright = "Camunda Services GmbH © 2017"
+  title = "Open Source Workflow and Decision Automation | Camunda" # Site title
+
+  [[Languages.en.menu.main]]
+  name = "Products"
+  weight = 1
+  identifier = "products"
+  url = "/products/"
+  pre = ""
+
+  [[Languages.en.menu.main]]
+  name = "Solutions"
+  weight = 2
+  identifier = "solutions"
+  url = "/solutions/"
+  pre = ""
+
+  [[Languages.en.menu.main]]
+  name = "Services"
+  pre = ""
+  weight = 3
+  identifier = "services"
+  url = "/services/"
+
+  [[Languages.en.menu.main]]
+  name = "Customers"
+  identifier = "case-studies"
+  weight = 4
+  url = "/case-studies/"
+
+  [[Languages.en.menu.main]]
+  name = "Learn"
+  identifier = "learn"
+  weight = 5
+  url = "/learn/"
+
+  [[Languages.en.menu.main]]
+  name = "Download"
+  identifier = "download"
+  weight = 12
+  url = "/download/"
+
+  [[Languages.en.menu.main]]
+  name = "Contact"
+  identifier = "Contact"
+  weight = 11
+  url = "/contact/"
+
+  [Languages.de]
+  languageCode = "de"
+  weight = 2
+  title = "Camunda" # Site title
+  copyright = "(c) 2017 Camunda"
+
+  [[Languages.de.menu.main]]
+  name = "Produkte"
+  pre = ""
+  weight = 1
+  identifier = "products"
+  url = "/de/products/"
+
+  [[Languages.de.menu.main]]
+  name = "Lösungen"
+  pre = ""
+  weight = 2
+  identifier = "solutions"
+  url = "/de/solutions/"
+
+  [[Languages.de.menu.main]]
+  name = "Services"
+  pre = ""
+  weight = 3
+  identifier = "services"
+  url = "/de/services/"
+
+  [[Languages.de.menu.main]]
+  name = "Kunden"
+  identifier = "case-studies"
+  weight = 4
+  url = "/de/case-studies/"
+
+  [[Languages.de.menu.main]]
+  name = "Lernen"
+  identifier = "learn"
+  weight = 5
+  second = true
+  url = "/de/learn/"
+
+  [[Languages.de.menu.main]]
+  name = "Download"
+  identifier = "download"
+  weight = 12
+  url = "/de/download/"
+
+  [[Languages.de.menu.main]]
+  name = "Kontakt"
+  identifier = "Contact"
+  weight = 11
+  url = "/de/contact/"
+
+  [[Languages.en.menu.footer]]
+  name = "Products"
+  weight = 1
+  identifier = "products"
+  url = "/products/"
+  pre = ""
+
+  [[Languages.en.menu.footer]]
+  name = "BPMN Engine"
+  weight = 1
+  identifier = "bpmn-engine"
+  url = "/products/bpmn-engine/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "DMN Engine"
+  weight = 2
+  identifier = "dmn-engine"
+  url = "/products/dmn-engine/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Modeler"
+  weight = 3
+  identifier = "modeler"
+  url = "/products/modeler/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Cockpit"
+  weight = 4
+  identifier = "cockpit"
+  url = "/products/cockpit/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Tasklist"
+  weight = 5
+  identifier = "tasklist"
+  url = "/products/tasklist/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Admin"
+  weight = 6
+  identifier = "Admin"
+  url = "/products/admin/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Optimize"
+  weight = 7
+  identifier = "optimize"
+  url = "/products/optimize"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Cawemo"
+  weight = 8
+  identifier = "cawemo"
+  url = "/products/cawemo"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Cloud"
+  weight = 9
+  identifier = "cloud"
+  url = "/products/cloud"
+  pre = ""
+  parent = "products"
+
+  [[Languages.en.menu.footer]]
+  name = "Services"
+  weight = 2
+  identifier = "services"
+  url = "/services/"
+  pre = ""
+
+  [[Languages.en.menu.footer]]
+  name = "Enterprise Platform"
+  weight = 1
+  identifier = "enterprise"
+  url = "/enterprise/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.en.menu.footer]]
+  name = "Consulting"
+  weight = 2
+  identifier = "consulting"
+  url = "/services/consulting/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.en.menu.footer]]
+  name = "Training"
+  weight = 3
+  identifier = "training"
+  url = "/services/training/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.en.menu.footer]]
+  name = "Resources"
+  weight = 3
+  identifier = "resources"
+  url = "/resources/"
+  pre = ""
+
+  [[Languages.en.menu.footer]]
+  name = "Download Community"
+  weight = 1
+  identifier = "community-download"
+  url = "/download/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "Download Enterprise"
+  weight = 2
+  identifier = "enterprise-download"
+  url = "/download/enterprise/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "Download Modeler"
+  weight = 3
+  identifier = "modeler-download"
+  url = "/download/modeler/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "Documentation"
+  weight = 4
+  identifier = "documentation"
+  url = "https://docs.camunda.org"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "BPMN Tutorial"
+  weight = 5
+  identifier = "bpmn-tutorial"
+  url = "/bpmn/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "BPMN Tool"
+  weight = 6
+  identifier = "bpmn-tool"
+  url = "/bpmn/tool/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "DMN Tutorial"
+  weight = 7
+  identifier = "dmn-tutorial"
+  url = "/dmn/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "Security"
+  weight = 8
+  identifier = "security"
+  url = "https://docs.camunda.org/security/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.en.menu.footer]]
+  name = "Community"
+  weight = 4
+  identifier = "community"
+  url = "/community/"
+  pre = ""
+
+  [[Languages.en.menu.footer]]
+  name = "Community"
+  weight = 1
+  identifier = "community-sub"
+  url = "/learn/community/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.en.menu.footer]]
+  name = "Forum"
+  weight = 2
+  identifier = "forum"
+  url = "https://forum.camunda.org/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.en.menu.footer]]
+  name = "Events"
+  weight = 3
+  identifier = "events"
+  url = "/events/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.en.menu.footer]]
+  name = "About"
+  weight = 5
+  identifier = "about"
+  url = "/about/"
+  pre = ""
+
+  [[Languages.en.menu.footer]]
+  name = "Contact"
+  weight = 1
+  identifier = "contact"
+  url = "/contact/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Leadership"
+  weight = 2
+  identifier = "leadership"
+  url = "/about/leadership/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Locations"
+  weight = 3
+  identifier = "locations"
+  url = "/about/locations/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Careers"
+  weight = 4
+  identifier = "careers"
+  url = "/career/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Press"
+  weight = 5
+  identifier = "press"
+  url = "/about/press/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Partners"
+  weight = 6
+  identifier = "partners"
+  url = "/partners/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "References"
+  weight = 7
+  identifier = "references"
+  url = "/case-studies/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.en.menu.footer]]
+  name = "Brand"
+  weight = 8
+  identifier = "brand"
+  url = "/brand/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Produkte"
+  weight = 1
+  identifier = "products"
+  url = "/de/products/"
+  pre = ""
+
+  [[Languages.de.menu.footer]]
+  name = "BPMN Engine"
+  weight = 1
+  identifier = "bpmn-engine"
+  url = "/de/products/bpmn-engine/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "DMN Engine"
+  weight = 2
+  identifier = "dmn-engine"
+  url = "/de/products/dmn-engine/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Modeler"
+  weight = 3
+  identifier = "modeler"
+  url = "/de/products/modeler/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Cockpit"
+  weight = 4
+  identifier = "cockpit"
+  url = "/de/products/cockpit/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Tasklist"
+  weight = 5
+  identifier = "tasklist"
+  url = "/de/products/tasklist/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Admin"
+  weight = 6
+  identifier = "Admin"
+  url = "/de/products/admin/"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Optimize"
+  weight = 7
+  identifier = "optimize"
+  url = "/de/products/optimize"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Cawemo"
+  weight = 8
+  identifier = "cawemo"
+  url = "/de/products/cawemo"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Cloud"
+  weight = 9
+  identifier = "cloud"
+  url = "/de/products/cloud"
+  pre = ""
+  parent = "products"
+
+  [[Languages.de.menu.footer]]
+  name = "Services"
+  weight = 2
+  identifier = "services"
+  url = "/de/services/"
+  pre = ""
+
+  [[Languages.de.menu.footer]]
+  name = "Enterprise Platform"
+  weight = 1
+  identifier = "enterprise"
+  url = "/de/enterprise/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.de.menu.footer]]
+  name = "Consulting"
+  weight = 2
+  identifier = "consulting"
+  url = "/de/services/consulting/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.de.menu.footer]]
+  name = "Training"
+  weight = 3
+  identifier = "training"
+  url = "/de/services/training/"
+  pre = ""
+  parent = "services"
+
+  [[Languages.de.menu.footer]]
+  name = "Resources"
+  weight = 3
+  identifier = "resources"
+  url = "/de/resources/"
+  pre = ""
+
+  [[Languages.de.menu.footer]]
+  name = "Download Community"
+  weight = 1
+  identifier = "community-download"
+  url = "/de/download/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "Download Enterprise"
+  weight = 2
+  identifier = "enterprise-download"
+  url = "/de/download/enterprise/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "Download Modeler"
+  weight = 3
+  identifier = "modeler-download"
+  url = "/de/download/modeler/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "Documentation"
+  weight = 4
+  identifier = "documentation"
+  url = "https://docs.camunda.org"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "BPMN Tutorial"
+  weight = 5
+  identifier = "bpmn-tutorial"
+  url = "/de/bpmn/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "BPMN Tool"
+  weight = 6
+  identifier = "bpmn-tool"
+  url = "/de/bpmn/tool/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "DMN Tutorial"
+  weight = 7
+  identifier = "dmn-tutorial"
+  url = "/de/dmn/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "Security"
+  weight = 8
+  identifier = "security"
+  url = "https://docs.camunda.org/security/"
+  pre = ""
+  parent = "resources"
+
+  [[Languages.de.menu.footer]]
+  name = "Community"
+  weight = 4
+  identifier = "community"
+  url = "/de/community/"
+  pre = ""
+
+  [[Languages.de.menu.footer]]
+  name = "Community"
+  weight = 1
+  identifier = "community-sub"
+  url = "/de/learn/community/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.de.menu.footer]]
+  name = "Forum"
+  weight = 2
+  identifier = "forum"
+  url = "https://forum.camunda.org/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.de.menu.footer]]
+  name = "Events"
+  weight = 3
+  identifier = "events"
+  url = "/de/events/"
+  pre = ""
+  parent = "community"
+
+  [[Languages.de.menu.footer]]
+  name = "Über uns"
+  weight = 5
+  identifier = "about"
+  url = "/de/about/"
+  pre = ""
+
+  [[Languages.de.menu.footer]]
+  name = "Kontakt"
+  weight = 1
+  identifier = "contact"
+  url = "/de/contact/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Leadership"
+  weight = 2
+  identifier = "leadership"
+  url = "/de/about/leadership/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Standorte"
+  weight = 3
+  identifier = "locations"
+  url = "/de/about/locations/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Karriere"
+  weight = 4
+  identifier = "careers"
+  url = "/de/career/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Press"
+  weight = 5
+  identifier = "press"
+  url = "/de/about/press/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Partner"
+  weight = 6
+  identifier = "partners"
+  url = "/de/partners/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Referenzen"
+  weight = 7
+  identifier = "references"
+  url = "/de/case-studies/"
+  pre = ""
+  parent = "about"
+
+  [[Languages.de.menu.footer]]
+  name = "Brand"
+  weight = 8
+  identifier = "brand"
+  url = "/de/brand/"
+  pre = ""
+  parent = "about"

@@ -1,0 +1,47 @@
+version: '2'
+
+services:
+  ## Camunda BPM 7.11.4
+  camunda-bpm:
+    container_name: camunda-bpm
+    image: registry.camunda.cloud/cambpm-ee/camunda-bpm-platform-ee:7.11.4
+    ports:
+      - "8080:8080"
+    networks:
+      - optimize
+    mem_limit: 768m
+    restart: always
+  ## Camunda Optimize 2.6.0
+  camunda-optimize:
+    image: registry.camunda.cloud/optimize-ee/optimize:2.6.0
+    mem_limit: 1g
+    environment:
+      - OPTIMIZE_CAMUNDABPM_REST_URL=http://camunda-bpm:8080/engine-rest
+      - OPTIMIZE_ELASTICSEARCH_HOST=optimize-elasticsearch
+    ports:
+      - "8090:8090"
+    networks:
+      - optimize
+    depends_on:
+      - optimize-elasticsearch
+      - camunda-bpm
+    restart: always
+  ## ElasticSearch 6.8.3
+  optimize-elasticsearch:
+    container_name: optimize-elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.3
+    mem_limit: 2g
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch-logs:/usr/share/elasticsearch/logs
+    networks:
+      - optimize
+    restart: always
+volumes:
+  elasticsearch-data:
+  elasticsearch-logs:
+
+networks:
+  optimize:

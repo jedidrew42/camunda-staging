@@ -1,0 +1,28 @@
+{
+  "overview": {
+    "de": {
+      "topic": "Thema",
+      "download": "Download"
+    },
+    "en": {
+      "topic": "Topic",
+      "download": "Download"
+    }
+  },
+  "detail": {
+    "de": {
+      "downloadWhitepaper": "Whitepaper Herunterladen",
+      "download": "Herunterladen",
+      "emailPlaceholder": "E-Mail",
+      "successMessage": "Sie werden dieses Whitepaper in Kürze per E-Mail erhalten.",
+      "notavailable": "Das Whitepaper ist in dieser Sprache leider nicht verfügbar."
+    },
+    "en": {
+      "downloadWhitepaper": "Download this Whitepaper",
+      "download": "Download",
+      "emailPlaceholder": "E-Mail",
+      "successMessage": "You will receive the whitepaper shortly in your inbox.",
+      "notavailable": "The Whitepaper is not available in this language."
+    }
+  }
+}

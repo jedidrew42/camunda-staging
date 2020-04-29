@@ -1,0 +1,23 @@
+{
+  "Names":
+  {
+    "de":
+    ["Camunda BPMN",
+    "Camunda Cloud"],
+  "en":
+    ["Camunda BPMN",
+    "Camunda Cloud"]
+  },
+"Links":{
+  "de":[
+    "/products/bpmn-engine/",
+    "/products/cloud/"
+  ],
+  "en": [
+    "/products/bpmn-engine/",
+    "/products/cloud/"
+  ]
+
+}
+
+}

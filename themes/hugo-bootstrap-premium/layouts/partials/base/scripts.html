@@ -1,0 +1,51 @@
+<script src="{{ "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" | absURL }}"></script>
+<script src="{{ "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js" | absURL }}"></script>
+{{ if eq .Site.Params.switchlang true }}
+<script src="{{ "https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js" | absURL }}"></script>
+{{ end }}
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+<script src="{{ "/js/index.js" | absURL }}"></script>
+<!-- <script src="https://camunda.com/js/index.js"></script>  -->
+{{ if .Page.Params.dmnsim }}
+<script src="{{ "/js/dmn-simulator.js" | absURL }}"></script>
+{{ end }}
+<script>
+
+    $('.modal').on('hidden.bs.modal', function () {
+        var video = $("#player").attr("src");
+        $("#player").attr("src","");
+        $("#player").attr("src",video);
+    })
+</script>
+
+{{ range .Site.Params.customJS }}
+<script type="text/javascript" src="{{ . | absURL}}"></script>
+{{ end }}
+
+<!-- Klaro Consent Manager -->
+<script defer type="text/javascript" src="{{ "/js/config.js" | absURL }}"></script>
+<script defer type="text/javascript" src="{{ "/js/klaro.js" | absURL }}"></script>
+<!-- end Klaro Consent Manager -->
+
+<!-- Hubspot -->
+<script type="text/plain"
+    data-type="text/javascript"
+    data-name="hubspot"
+    data-src="//js.hs-scripts.com/4513465.js">
+</script>
+
+<!-- Matomo add these to staging -->
+<script type="text/plain"
+data-type="text/javascript"
+data-name="matomo"
+data-src="//cdn.matomo.cloud/camunda.matomo.cloud/matomo.js">
+  </script>
+  <!-- End Matomo Code -->
+
+<!-- Start of HubSpot Embed Code 
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script> -->
+<!-- End of HubSpot Embed Code -->
+<!-- Start of HelloBar Code -->
+<!--<script src="https://my.hellobar.com/52c4f60962ffa71aa9a7dfca9953664498f81e17.js" type="text/javascript" charset="utf-8" async="async"></script> -->
+<!-- End of HelloBar Code -->

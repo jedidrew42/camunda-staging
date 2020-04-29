@@ -1,0 +1,66 @@
+{
+  "form": {
+    "de": {
+      "cta": "Jetzt anmelden",
+      "hubspotForm": "e22d196e-9d2d-4ec4-88ea-7f0b6e483bd9",
+      "goToWebinarWebinarKey" : "7774764766601676301"
+    },
+    "en": {
+      "cta": "Register now",
+      "hubspotForm": "e6f747b1-fec2-4b1a-b990-c2171bb58aa5",
+      "goToWebinarWebinarKey" : "2892059027532113677"
+    }
+  },
+  "detail": {
+    "de": {
+      "descriptiontitle": "Was Sie erwartet",
+      "recording": "Aufzeichnung",
+      "registernow": "Jetzt registrieren",
+      "watch": "Schau auf Anfrage",
+      "watchrecording": "Aufzeichnung ansehen"
+    },
+    "en": {
+      "descriptiontitle": "What to expect",
+      "recording": "Recording",
+      "registernow": "Register Now",
+      "watch": "Watch On Demand",
+      "watchrecording": "Watch Recording"
+    }
+  },
+  "overview": {
+    "de": {
+      "language": "Sprache",
+      "languages": {
+        "de_DE": "Deutsch",
+        "de": "Deutsch",
+        "en-US": "Englisch",
+        "en_US": "Englisch",
+        "en": "Englisch"
+      },
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "topic": "Thema",
+      "registration": "Jetzt Registrieren",
+      "recording": "Aufzeichnung",
+      "recording_watch": "Schau jetzt",
+      "nowebinars": "Momentan sind keine Webinare geplant."
+    },
+    "en": {
+      "language": "Language",
+      "languages": {
+        "de_DE": "German",
+        "de": "German",
+        "en-US": "English",
+        "en_US": "English",
+        "en": "English"
+      },
+      "date": "Date",
+      "time": "Time",
+      "topic": "Topic",
+      "registration": "Register Now",
+      "recording": "Recording",
+      "recording_watch": "Watch Now",
+      "nowebinars": "Currently there are no webinars scheduled."
+    }
+  }
+}

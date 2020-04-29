@@ -1,0 +1,42 @@
+<div class="full-width featured-customers {{if .Params.featured }}{{else}}no-bg{{end}}">
+	<div class="container no-padding">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="featured-customers__box">
+					<div class="featured-customers__logo">
+						<img src="/img/home/telekom.svg" alt="Telekom" class="img img-responsive" />
+					</div>
+					<div class="featured-customers__name">Deutsche Telekom</div>
+					<div class="featured-customers__text">
+						{{ if eq .Site.LanguageCode "de"}}<span>Die Deutsche Telekom ersetzt ein monolithisches System durch eine Microservices-Architektur</span>
+						{{else}}<span>Transforming from a monolithic application to an agile, microservices-based architecture</span>{{end}}
+					</div>
+					<div class="featured-customers__buttons">
+						{{ if eq .Site.LanguageCode "de"}}<a href="/de/case-studies/featured-deutsche-telekom/" class="btn btn-lg btn-primary">Mehr Infos</a>
+						{{else}}<a href="/case-studies/featured-deutsche-telekom/" class="btn btn-lg btn-primary">Learn more</a>{{end}}
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="featured-customers__box">
+					<div class="featured-customers__logo">
+						<img src="/svg/case-studies/24-fitness.svg" alt="24 Hour Fitness" class="img img-responsive" />
+					</div>
+					<div class="featured-customers__name">24 Hour Fitness</div>
+					<div class="featured-customers__text">
+							{{ if eq .Site.LanguageCode "de"}}
+							<span>24 Hour Fitness führt mehr als 20 Millionen BPMN-Workflows und 18 Millionen DMN-Instanzen pro Tag aus</span>
+							{{else}}<span>Executing more than 20M BPMN workflow instances and 18M DMN decision instances per day</span>{{end}}
+					</div>
+					<div class="featured-customers__buttons">
+						{{ if eq .Site.LanguageCode "de"}}<a href="/de/case-studies/featured-24-hour-fitness/" class="btn btn-lg btn-primary">Mehr Infos</a>
+						{{else}}<a href="/case-studies/featured-24-hour-fitness/" class="btn btn-lg btn-primary">Learn more</a>{{end}}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+<!-- End Google Tag Manager -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{ if ne .Description ""}}
+<meta name="description" content="{{ .Description }}" />
+{{ end }}
+
+<meta name="keywords" content="{{ if .Keywords }}{{ range .Keywords }}{{ . }}, {{ end }}{{else if isset .Params "tags" }}{{ range .Params.tags }}{{ . }}, {{ end }}{{end}}">
+
+<meta property="og:site_name" content="Camunda BPM"/>
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+<meta property="og:type" content="article" />
+
+{{ if ne .Description ""}}
+<meta property="og:description" content="{{ .Description }}"/>
+{{ end }}
+
+{{ if isset .Page.Params "og_image" }}
+<meta property="og:image" content="{{ .Page.Params.og_image | absURL }}" />
+{{ else }}
+<meta property="og:image" content="{{ "/img/camunda-logo-social-update.jpg" | absURL }}" />
+{{ end }}
+
+
+<meta name="twitter:site" content="@CamundaBPM" />
+<meta name="twitter:title" content="{{ .Title }}" />
+{{ if ne .Description ""}}
+<meta name="twitter:description" content="{{ .Description }}" />
+{{ end }}
+
+{{ if isset .Page.Params "og_image" }}
+<meta name="twitter:image" content="{{ .Page.Params.og_image | absURL }}" />
+{{ else }}
+<meta name="twitter:image" content="{{ "/img/camunda-logo-social.jpg" | absURL }}" />
+{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/touchicon.png">
+<link rel="icon" href="/favicon.png">
+
+{{ if .IsTranslated }}
+    {{ range .Translations }}
+    <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}">
+    {{ end}}
+{{ end }}

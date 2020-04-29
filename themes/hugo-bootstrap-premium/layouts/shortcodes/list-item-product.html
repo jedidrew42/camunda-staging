@@ -1,0 +1,28 @@
+<div class="full-width dark-bg list-item-products" {{if .Params.paddingbottom}}style="padding-bottom:{{.Params.paddingbottom}}"{{end}}>
+  {{if .Params.containertitle}}
+    <div class="row">
+      <div class="col-xs-12 text-center head">
+        <h2 class="light lead">{{.Params.containertitle}}</h2>
+      </div>
+    </div>
+  {{end}}
+  <section id="product-{{.Params.id}}" class="container page-section list-item-product list-item-bullets" {{if .Params.paddingtop}}style="margin-top:{{.Params.paddingtop}}"{{end}}>
+    <div class="row">
+      <div class="col-md-2">
+        <img src="/svg/{{(.Params.svg)}}" style="width:{{.Params.svg_width}}"/>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <header>
+          <h2>{{.Params.title}}</h2>
+        </header>
+        <p>{{.Inner}}</p>
+      </div>
+      <div class="col-lg-2 col-md-3 col-xs-12 pull-right">
+        <a href="{{.Params.link}}" class="btn btn-primary">{{.Params.link_label}}</a>
+        {{if .Params.secondarylink }}
+        <a href="{{.Params.secondarylink}}" class="btn btn-default">{{.Params.secondarylink_label}}</a>
+        {{end}}
+      </div>
+    </div>
+  </section>
+</div>

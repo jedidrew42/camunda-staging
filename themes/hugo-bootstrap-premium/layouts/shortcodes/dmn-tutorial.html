@@ -1,0 +1,312 @@
+
+<div class="page-section">
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-3 bs-docs-sidebar">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#why_care_about_DMN">Why should I care about DMN?</a></li>
+          <li><a href="#simple_flow_DMN">A simple decision table</a></li>
+          <li><a href="#conditions_DMN">Combining Conditions</a></li>
+          <li><a href="#feel">Introducing FEEL</a></li>
+          <li><a href="#bpmn">DMN and BPMN Processes</a></li>
+          <li><a href="#cmmn">DMN and CMMN Cases</a></li>
+          <li><a href="#drd">Decision Requirements Diagrams</a></li>
+          <li><a href="#learn">Learn more</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <section>
+          <h3>DMN Online Simulator</h3>
+          <p>Learning by Doing: You can use our free online simulator to execute DMN decision tables that you create.</p>
+          <a data-track="DMNTutorial/Simulator" class="btn btn-primary" href="/dmn/simulator">DMN Online Simulator</a>
+        </section>
+
+        <section>
+          <h2 class="page-header" id="why_care_about_DMN">Why should I care about DMN?</h2>
+          <p>Decision Model and Notation (DMN) is an industry standard for modeling and executing decisions that are determined by
+            business rules.</p>
+          <p>DMN has been published in 2015 and is currently seeing a very quick adoption.
+            These are the reasons:</p>
+          <dl class="dl-horizontal">
+            <dt>Standard</dt>
+            <dd>DMN is not owned by a certain enterprise but by an institution (<a href="http://www.omg.org">OMG</a>),
+              which is already established through other world-wide standards, e.g., BPMN and UML.
+              The DMN standard is supported by several software products; you are less dependent on any particular
+              vendor's products.</dd>
+            <dt>Direct Execution</dt>
+            <dd>In DMN, decisions can be modeled and executed using the same language. Business analysts can model the rules that lead to
+            a decision in easy to read tables, and those tables can be executed directly by a decision engine (like Camunda).
+            This minimizes the risk of misunderstandings between business analysts and developers, and it even allows rapid changes
+            in production.
+            </dd>
+            <dt>Experience</dt>
+            <dd>DMN as a standard is young, but it was developed by people having decades of experience with business rule management.
+              Even though, the standard does not
+              dictate any special implementation patterns, allowing for more modern and lightweight implementations than traditional business rule engines.
+            </dd>
+          </dl>
+        <p>This tutorial provides a quick introduction into DMN, as it is defined in version 1.1.</p>
+
+        </section>
+
+        <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="simple_flow_DMN">A simple decision table</h2>
+          <p>We should begin our DMN tutorial with a rather simple decision table:</p>
+          <p>
+
+              <img class="img-responsive"  src="/img/dmn/tutorial/dish-1input.png">
+
+          </p>
+
+          <p>
+            Let's assume we have invited some guests for dinner. The question is, which dish we should prepare. In this example,
+            we follow a very simple decision logic: Depending on the current season, we decide on the dish. If it's Fall, we will
+            go for spareribs, in Winter for roastbeef and so on.
+          </p>
+          <p>
+            Let's look at the elements in this example:
+          </p>
+          <p>
+            <ul>
+              <li>In the upper left corner we find the <strong>name</strong> of this decision table: "Dish"</li>
+              <li>Below that is an "U", which stands for <strong>unique</strong> and is the defined <strong>hit policy</strong> for this decision table.
+                It means that, when a decision has to be made, only one of the rows below can be true. In this case, the current season can only be fall, winter, spring or summer.
+                We cannot have two seasons at the same time, even if the summer is bloody cold this year.</li>
+              <li>
+                The columns in light green refer to possible <strong>input</strong> data. In this example, there is only one input column, because we are only
+                interested in the current season. The cell with the text "Season" defines this.  In DMN, this is the label for
+                 an <strong>input expression</strong>. The expression itself is hidden in this example for the sake of simplicity, but
+                 will be revealed later in this tutorial. The cells below (called <strong>input entries</strong>) refer to the possible conditions
+                regarding the input. Those conditons are in quotation marks (like "Summer"), which is because we are technically comparing
+                String values.
+              </li>
+              <li>For each possible input entry (i.e. the name of the current season), we define the according <strong>output entry</strong>
+                in the cell next to it. That's how we express that based on the season, we desire a certain dish. Again, we have to use
+                quotation marks (like "Steak") because technically we are assigning String values.</li>
+              <li>The definition, that according to an input entry that is true (or a combination of true input entries),
+                a specific output entry should apply, is a <strong>rule</strong>. Each rule is defined in a table row
+                below the table header, and has a number, which you can find in the cells to the left.</li>
+              <li>Last but not least, you can <strong>annotate</strong> your rules in the column on the right. Those annotations are only there for
+                the sake of explanation, and will be ignored by a decision engine.</li>
+            </ul>
+          </p>
+          <p>
+            Simple enough, isn't it? Of course there is more to DMN, but the basic principles are indeed very straight forward.
+          </p>
+        </section>
+
+        <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="conditions_DMN">Combining Conditions</h2>
+          <p>In many cases a rule will not only consist of one condition, but a combination of conditions. We can express that
+            by adding input columns to the decision table:</p>
+          <p>
+            <div >
+              <img class="img-responsive"  src="/img/dmn/tutorial/dish-2input.png">
+            </div>
+          </p>
+
+          <p>
+            In this case we may want to consider guests that are vegetarian. Regardless of the season, we cannot serve them any meat.
+            Fortunately, we always have some pasta available. By combining the two input columns "Season" and "Vegetarian Guests", we have made sure that the first four rules
+            can only evaluate to true, if the guests are not vegetarian. Rule number 5 has a "-" in the input entry that checks the season,
+             and this means that it can be any season, as long as the guests are vegetarians, they will get pasta.
+          </p>
+          <p>
+            As you can see, the combination of input entries in a rule (i.e. a table row) always follow an <strong>AND</strong> logic: "If it's fall
+            <strong>and</strong> my guests are not vegetarian, I will serve spareribs."
+          </p>
+        </section>
+
+      <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="feel">Introducing FEEL</h2>
+          <p>Now that you have a basic understanding of a decision table structure, let's take a closer look at possible input entries.
+            It's quite simple to say that certain data should be compared to certain strings (like the fact, that the season should
+            be summer). But DMN offers more advanced concepts for checking input entries. Part of the DMN standard is the
+            <strong>Friendly Enough Expression Language (FEEL)</strong>.
+          </p>
+          <p>
+            FEEL defines a syntax for expressing conditions that input data should be evaluated against. For example, you can
+            describe in FEEL that a certain input data should be
+            <ul>
+              <li>a concrete string (like the season, that should be "summer")</li>
+              <li>true or false (like the fact that our guests are vegetarians)</li>
+              <li>a number that is below, above or the exact same like another given number</li>
+              <li>a number that is between a minimum and a maximum given number</li>
+              <li>a date that is before, later or the same like another given date</li>
+              <li>...and much more</li>
+            </ul>
+          </p>
+          <p>
+            To get a first idea, please have a look at the example below:
+          </p>
+          <p>
+            <div style="position:relative">
+              <img class="img-responsive"  src="/img/dmn/tutorial/dish-feel.png">
+            </div>
+          </p>
+          <p>
+            The first thing you'll notice are two additional rows with grey cells. These rows describe technical details that the
+            decision engine needs in order to execute the decision. The first one contains expressions that - in this case -
+            simply refer to variable names, namely season, guestCount
+            and desiredDish. The second one tells the engine the type of the respective outcome of the expression, in this case
+            string and integer.
+          </p>
+          <p>
+            In the first examples those rows were hidden, in order to not overwhelm you right upfront. But in fact, those types are
+            important, because they determine which FEEL expressions are available for the input entries.</p>
+            <p> Let's look at each rule, i.e. at each row:
+            <ol>
+              <li>If it's fall and you expect up to 8 guests, you will prepare spareribs.</li>
+              <li>If it's winter and you expect up to 8 guests, you will serve them roastbeef.</li>
+              <li>If it's spring and you expect up to 4 guests, you will indulge them with very fine, dry aged beefsteak.</li>
+              <li>If it's spring and you expect 5 to 8 guests, you will serve them an ordinary steak.</li>
+              <li>If it's fall, winter or spring, and you expect more than 8 guests, you will go for stew.</li>
+              <li>If it's summer, there will be a light salad and, of course, a nice steak, no matter what. Yay!</lI>
+            </ol>
+          </p>
+          <p>
+          As you probably guess already, this is just the tip of the iceberg. There is much more that you can express in DMN decision
+          tables, as we describe in the <a href="https://docs.camunda.org/manual/reference/dmn11/" target="_blank">DMN Reference Guide</a>.
+          </p>
+          <div class="alert alert-info">
+            <strong>For Developers: </strong> You can find an <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/dmn-engine/dmn-engine-java-main-method" target="_blank">implemented version of this example</a> on GitHub.
+          </div>
+
+        </section>
+
+        <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="bpmn">DMN and BPMN Processes</h2>
+          <p>Perhaps you're thinking:</p>
+          <blockquote>
+            Hey, why should I use DMN anyway, I can express those rules with <a href="/bpmn/reference/#gateways-data-based-exclusive-gateways">
+            BPMN gateways</a>!
+          </blockquote>
+          <p>If we express the example above in BPMN, it looks like this:</p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/dmn-bpmn.png">
+          </p>
+          <p>
+            The sorrow is obvious: It's way more verbose to express rules in BPMN, especially when there are several conditions
+            to consider. The diagram becomes complex and hard to maintain.
+          </p>
+          <p>
+            That is why BPMN includes a so-called <strong>business rule task</strong>, which should better be named <strong>decision task</strong>
+            in a later version of
+            the BPMN standard: That task refers to a decision that needs to be made, and the outcome of the decision allows the subsequent
+            exclusive gateway to route the flow, as you can see in the example below.
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/dmn-bpmn-good.png">
+          </p>
+          <p>
+            During modeling as well as execution, we can link the task "Decide Dish" to the DMN decision table, that will be executed when the decision should
+            be made, and the result will then determine the further flow in BPMN.
+          </p>
+          <p>
+            In this particular example, you could question the use of the flow routing anyway. There are six tasks that are about preparing a meal,
+            the only difference being the kind of meal. There is not apparant advantage of having those six distinct tasks. An alternative pattern would
+            be below:
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/dmn-bpmn-better.png">
+          </p>
+          <p>
+            It's too easy, right? But in this case, it's in fact an appropriate pattern.
+          </p>
+          <p>
+            Combining BPMN with DMN is a very reasonable approach. Unfortunately, it is not yet standardized by OMG.
+            This means, that a reference from a BPMN business rule task to a DMN decision is always vendor specific.
+            <p>
+            <a class="btn btn-outline" href="https://docs.camunda.org/manual/develop/user-guide/process-engine/decisions/#decisions-inside-bpmn" target="_blank">
+              How Camunda links BPMN to DMN</a>.
+            </p>
+          <p>
+        </section>
+
+        <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="cmmn">DMN and CMMN Cases</h2>
+          <p>BPMN is great for processes that are structured, but not for less structures activities. This is where CMMN kicks in.
+            Again, it makes a lot of sense to combine this OMG standard with DMN. For example like this:
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/cmmn.png">
+          </p>
+          <p>
+            Preparing a nice dinner with friends is an art of its own, which demands a real knowledge worker.
+          </p>
+          <p> In this CMMN case, we will need to invite our guests, for obvious reasons.
+            We <strong>might</strong> need to prepare the terrace for eating outside. This is determined by the entry criterion
+            (the little diamond on the left edge of the human task), that points to a sentry, where a decision table result is evaluated. The
+            decision table could look like this:
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/dmn-cmmn.png">
+          </p>
+          <p>
+            You may notice that the hit policy in this example is not "unique", but "first" (marked as "F"). This means that the decision engine will evaluate the rules and stop
+            evaluating once it has found a rule that applies. In this case this makes sense, because the rules 2 and 3 both apply, if it is colder than 20° C
+            <strong>and</strong> the rain propability is 50% or higher. Setting the hit policy to "unique" would therefore not be correct.
+          </p>
+          <p>
+            As with BPMN, the OMG has not yet standardized the way that CMMN and DMN can be combined. The example in this tutorial is therefore
+            based on a proprietary extension that Camunda offers.
+          </p>
+        </section>
+
+        <hr class="narrow">
+
+        <section>
+          <h2 class="page-header" id="drd">Decision Requirements Diagrams</h2>
+          <p>
+            If you want to discuss and analyze complex decisions, that may be composed of other decisions, decision requirements diagrams (DRD)
+            can be helpful. This is a quite simple notation defined in the DMN standard, that basically concists of
+            <ul>
+              <li><strong>Decisions</strong>: The act of determining an output value from a number of input values, using logic definition. This decision logic
+                is what you can express in decision tables.</li>
+              <li><strong>Input Data</strong>: The input data that you "feed" into your decision logic in order to determine the output value.</li>
+              <li><strong>Relations between Decisions</strong>: You can connect decisions
+                with arrows and therefore indicate which decision output will be considered as an input for another decision.</li>
+            </ul>
+          </p>
+          <p>
+            There are a few more symbols in the DRD notation, however the most relevant ones are these three. We should look at an example:
+          </p>
+
+          <p>
+            Let's assume that for our dinner, we also need to decide the beverages we want to serve. This decision should be based on
+            the dish we will prepare and also consider children. The decision table could look like this:
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/dmn-drinks.png">
+          </p>
+          <p>
+            You will notice that this table has a "C" in the upper left corner, instead of the "U" you have seen in the previous examples.
+            The C stands for <strong>Collect</strong>, which is an other <strong>hit policy</strong>, and it means that more than one rule could be true, which would lead to a list of output values.
+          </p>
+          <p>For example, if we will have spareribs, and our guests come with children, we will serve water, apple juice and the famous
+            <a target="_blank" href="http://www.schlenkerla.de/indexe.html">Aecht Schlenkerla Rauchbier</a>.
+          </p>
+          <p>
+            Obviously, we need to determine the dish we will prepare, before we can decide the beverages. And this relation is what you can
+            describe in a DRD, like we did in this example:
+          </p>
+          <p>
+            <img class="img-responsive" src="/img/dmn/tutorial/drd.png">
+          </p>
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+</div>

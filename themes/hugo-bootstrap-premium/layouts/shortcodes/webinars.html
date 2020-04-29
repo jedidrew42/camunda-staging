@@ -1,0 +1,47 @@
+<div class="webinars">
+  {{$sectionVars := index .Site.Data .Page.Section}}
+  {{$i18nOverview := index $sectionVars.webinars.overview .Site.LanguageCode}}
+
+  <div class="webinars-overview">
+    <dic class="webinars-list mt-50">
+      <ul class="cards">
+      {{ $webinarVars := index .Site.Data .Page.Section }}
+      {{ $overview := index $webinarVars.webinar .Site.LanguageCode }}
+      {{ range sort $overview "datetime" "desc" }}
+      <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-figure">
+                <a href="{{.technicalName}}">
+                  {{ if eq .recordinglink "" }}
+                  <img src="/img/learn/webinars/webinar-signup.svg" class="img-responsive" alt="{{.title}}">
+                  {{else}}
+                  <img src="/img/learn/webinars/watch-now.svg" class="img-responsive" alt="{{.title}}">
+                  {{end}}
+                </a>
+            </div>
+            <div class="name-wrap">
+                <div class="name">{{.title}}</div>
+            </div>
+            <hr>
+            <div class="details">
+                <p class="date parse-date">{{.datetime }}</p>
+                <p>{{index $i18nOverview.languages .language}}</p>
+            </div>
+            <div class="btn-wrapper">
+              <a href="{{.technicalName}}" class="{{.linkClass}} btn btn-default">
+               {{ if eq .recordinglink "" }}
+               <strong>{{index $i18nOverview "registration"}}</strong>
+               {{ else }}
+               <strong>{{index $i18nOverview "recording_watch"}}</strong>
+               {{ end }}
+             </a>
+            </div>
+          </div>
+          </div>
+      </li>
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

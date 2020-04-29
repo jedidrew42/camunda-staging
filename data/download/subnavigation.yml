@@ -1,0 +1,29 @@
+Title:
+  de: "Download Camunda"
+  en: "Download Camunda"
+
+Names:
+  de:
+    - "Open Source<br><b>Modeler</b>"
+    - "Open Source <br> <b>Community <span class='hidden-xs'>Platform</b></span>"
+    - "30-Day Trial<span class='hidden-xs'><br><b>Enterprise Platform</b></span>"
+    - "Download for<span class='hidden-xs'><br><b>Enterprise Customers</b></span>"
+
+  en:
+    - "Open Source<br><b>Modeler</b>"
+    - "Open Source <br><b>Community <span class='hidden-xs'>Platform</b></span>"
+    - "30-Day Trial<span class='hidden-xs'><br><b>Enterprise Platform</b></span>"
+    - "Download for<span class='hidden-xs'><br><b>Enterprise Customers</b></span>"
+
+
+Links:
+  de:
+    - "/download/modeler/"
+    - "/download/"
+    - "/download/enterprise/"
+    - "https://docs.camunda.org/enterprise/download/"
+  en:
+    - "/download/modeler/"
+    - "/download/"
+    - "/download/enterprise/"
+    - "https://docs.camunda.org/enterprise/download/"

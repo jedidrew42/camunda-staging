@@ -1,0 +1,237 @@
+.subscribe-form {
+  .email {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @media (max-width: @grid-float-breakpoint-max) {
+    .form-group {
+      width: 50%;
+      padding: 0 40px;
+    }
+    label, input {
+      display: block;
+    }
+    .email {
+      margin: 0;
+      width: 100%;
+    }
+    .btn {
+      margin: 10px auto;
+    }
+  }
+  @media (max-width: @screen-xs-max) {
+    .form-group {
+      width: 100%;
+    }
+  }
+}
+.form-control {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  &:focus {
+    border-color: #a1a1a1;
+  }
+}
+.form-control::-moz-placeholder {
+  font-style: normal;
+}
+.form-control:-ms-input-placeholder {
+  font-style: normal;
+}
+.form-control::-webkit-input-placeholder {
+  font-style: normal;
+}
+.hbspt-form {
+  div > label {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 0;
+    &.hs-error-msgs {
+      margin: 0!important;
+      padding-left: 0;
+    }
+  }
+  li {
+    text-align: left !important;
+
+    > label {
+      font-weight: normal;
+    }
+  }
+  .hs-error-msgs {
+    li {
+      > label {
+        color: red;
+      }
+    }
+  }
+  fieldset {
+    max-width: 100% !important;
+  }
+  textarea {
+    height: 150px !important;
+    width: 100%;
+  }
+  .hs-input {
+    margin-bottom: 12px;
+    width: 100%;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    color: #333;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: inherit;
+  }
+  input[type=checkbox].hs-input {
+    width: auto;
+    margin-right: 10px;
+    line-height: 12;
+    margin-bottom: 0;
+  }
+  .hs-button {
+    padding: 10px 16px;
+    line-height: 1.3333333;
+    border-radius: 4px;
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
+    color: #fff;
+    width: 100%;
+  }
+  ul.inputs-list {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+#eventmonitoring-form {
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+#microservices-form, #eventmonitoring-form {
+  max-width: 500px;
+  .hs-form, .hbspt-form {
+    label {
+      display: none;
+    }
+    .actions {
+      padding: 0;
+      margin-left: 0;
+    }
+    .hs-input {
+      border: 1px solid #dadada;
+      font-size: 16px;
+      padding: 6px 12px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 3px;
+      line-height: 18px;
+      color: #666;
+    }
+    .hs-button {
+      box-shadow: none;
+      font-size: 16px;
+      font-weight: normal;
+      padding: 8px 14px;
+      text-shadow: none;
+      line-height: 1.3333333;
+      background: #00a8ff;
+      border-color: #00a8ff;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+    .hs_error_rollup {
+      display: none;
+    }
+    .hs-richtext {
+      font-size: 12px;
+    }
+    .hs-form-field {
+      margin-bottom: 10px;
+      li {
+        display: block;
+      }
+      .hs-error-msgs {
+        margin: 0;
+        padding: 0;
+        label {
+          display: block;
+          color: red;
+          font-size: 14px;
+          font-weight: normal;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+#contact .hbspt-form, .contact .hbspt-form {
+  .hs-form {
+    width:68%;
+    @media (max-width: @grid-float-breakpoint-max) {
+      width:100%;
+    }
+  }
+  textarea {
+    height:150px !important;
+    width:100% !important;
+  }
+  .hs-button {
+    font-size: 20px;
+    width: auto;
+  }
+  .hs-input {
+      height: 39px;
+  }
+  select.hs-input {
+    width: 100%;
+  }
+  input[type=checkbox].hs-input {
+    height: auto;
+  }
+  .hs-richtext {
+        text-align: left;
+  }
+}
+#productupdate.hbspt-form  {
+  display: inline-block;
+  form div:first-child {
+    display: inline-block;
+  }
+  .hs-form-field {
+      display: inline-block;
+  }
+  .hs-submit {
+      display: inline-block;
+  }
+  .hs-input {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .hs-button {
+    width: auto;
+  }
+  .legal-consent-container {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 11px;
+  }
+  .hs_error_rollup {
+    display: none;
+  }
+  .hs-error-msgs.inputs-list {
+    position: absolute;
+    top: -25px;
+    margin-left: 10px !important;
+  }
+}

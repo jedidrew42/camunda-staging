@@ -1,0 +1,94 @@
+.editions {
+  font-size: 100%; border:1px solid #d9d9d9;
+  .editions-name {
+    font-size:120% !important;
+    text-align: center;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .editions-name-standard {
+    background-color: #00a8ff;
+    color: #fff;
+
+    a {
+      padding-left: 10px;
+      padding-right: 10px;
+      border-color: #fff;
+      background-color: #00a8ff;
+      color: #fff;
+      &:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #fff;
+        background-color: #fff;
+        color: #00a8ff;
+      }
+    }
+  }
+  .check {text-align: center; }
+  .level2 {padding-left: 30px !important; font-size:90%;}
+  .level3 {padding-left: 60px !important; font-size:90%;}
+  .header {background-color: #fff}
+
+  border-top: none;
+  border-left: none;
+
+  .head {
+    td:not(.editions-name) {
+      border: none;
+    }
+
+    .editions-name {
+      border-left: 1px solid #ddd;
+    }
+
+    .editions-name-standard {
+      background: rgb(0,61,114);
+      border: 2px solid rgb(0,61,114);
+
+      p {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .cta {
+    border-right: 1px solid #ddd;
+
+    .level3 {
+      border-top: none;
+      border-right: 1px solid #ddd;
+    }
+  }
+
+  tr:not(.cta):not(.head) {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+  .free,
+  .community {
+    border-left: 1px solid #ddd;
+  }
+
+  .level2.header {
+    font-family: 'IBM Plex Sans', Helvetica, Arial, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  .enterprise-saas,
+  .enterprise {
+    border-left: 2px solid rgb(0,61,114);
+  }
+  .enterprise-prem,
+  .enterprise {
+    border-right: 2px solid rgb(0,61,114);
+  }
+
+  tbody>tr:last-child .enterprise-prem,
+  tbody>tr:last-child .enterprise-saas,
+  tbody>tr:last-child .enterprise {
+    border-bottom: 2px solid rgb(0,61,114);
+  }
+}

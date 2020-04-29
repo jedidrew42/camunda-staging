@@ -1,0 +1,24 @@
+<div class="training">
+  {{$sectionVars := index .Site.Data .Page.Section}}
+  {{$i18nOverview := index $sectionVars.training.overview .Site.LanguageCode}}
+  {{$trainings := index $sectionVars.overview}}
+
+  <div class="training-overview">{{.Inner}}
+    <div class="training-next-dates" style="display:none" data-trainings="{{$trainings | jsonify}}" data-i18n="{{$i18nOverview | jsonify}}">
+      <h2 class="light lead">{{$i18nOverview.nexttrainings}}</h2>
+      <div class="form-group">
+      <form class="form-inline">
+        <input type="text" id="nexttraining-search" class="search-nexttrainings form-control" placeholder="Search">
+      </div>
+      <table class="table next-trainings">
+        <thead>
+          <tr><th>{{$i18nOverview.name}}</th><th>{{$i18nOverview.language}}</th><th>{{$i18nOverview.begin}}</th><th>{{$i18nOverview.end}}</th><th>{{$i18nOverview.city}}</th><th>{{$i18nOverview.book}}</th></tr>
+        </thead>
+        <tbody class="loading-indicator">
+          <tr><td colspan="6" rowspan="4"></td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

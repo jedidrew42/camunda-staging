@@ -1,0 +1,36 @@
+{{if and (isset .Params "featured") (eq .Params.featured "true") }}
+  {{ partial "modules/customers/featured-customers" . }}
+{{end}}
+
+<div class="full-width logos">
+	<div class="container no-padding">
+		<center>
+			{{if isset .Params "logos"}}
+				{{ $logos := split .Params.logos "|" }}
+				{{ $alts := split .Params.logos_alt "|" }}
+
+				{{ range $index, $logo := $logos }}
+
+					{{if eq (mod $index 6) 0 }} <div class="row"> {{ end }}
+						<div class="col-md-2"> <span><img src="{{$logo}}" alt="{{index $alts $index}}" class="img img-responsive"/></span> </div>
+					{{if eq (mod $index 6) 5 }} </div> {{ end }}
+
+				{{ end }}
+			{{else}}
+				<div class="row">
+					<div class="col-md-2"><span><img src="/img/home/allianz.svg" alt="Allianz" class="img img-responsive"/></span></div>
+					<div class="col-md-2"><span><img src="/img/home/db.svg" alt="DB" class="img img-responsive"/></span></div>
+					<div class="col-md-2"><span><img src="/img/home/ing.svg" alt="ING Diba" class="img img-responsive"/></span></div>
+					<div class="col-md-2"><span><img src="/img/home/telekom.svg" alt="Telekom" class="img img-responsive"/></span></div>
+					<div class="col-md-2"><span><img src="/img/home/universal.svg" alt="Universal Music" class="img img-responsive"/></span></div>
+					<div class="col-md-2"><span><img src="/img/home/zalando.svg" alt="Zalando" class="img img-responsive"/></span></div>
+				</div>
+			{{end}}
+
+			{{if and (isset .Params "btn_href") (isset .Params "btn_text") }}
+				<a href="{{.Params.btn_href}}" class="btn btn-lg btn-primary">{{.Params.btn_text}}</a>
+			{{end}}
+
+		</center>
+	</div>
+</div>

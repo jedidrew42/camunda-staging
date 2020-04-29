@@ -1,0 +1,7 @@
+<div class="full-width customers-row">
+  {{if and (isset .Params "long") (eq .Params.long "true") }}
+    {{ partial "modules/customers/long" . }}
+  {{else}}
+    {{ partial "modules/customers/simple" . }}
+  {{end}}
+</div>

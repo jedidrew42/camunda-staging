@@ -1,0 +1,3 @@
+{{if .Params.Svg}}<div class="text-icon-img">{{end}}
+{{- if .Params.urlvariable -}}<a href="{{- (partial "getdata.html" .) | safeURL -}}" class="btn btn-primary {{.Params.linkclass}}"> <i class="glyphicon {{.Params.Icon}}"></i> {{.Params.Text}}</span></a>{{else if .Params.Url}}<a href="{{.Params.Url}}" class="btn btn-primary {{.Params.linkclass}}"> <i class="glyphicon {{.Params.Icon}}"></i> {{.Params.Text}}</span></a>{{else}}<span class="text-icon"><i class="glyphicon {{.Params.Icon}}"></i> {{.Params.Text}}</span>{{- end -}}
+{{- if .Params.Svg -}}<img src="/svg{{.Params.Svg}}" width="{{.Params.Svg_width}}"></div>{{- end -}}

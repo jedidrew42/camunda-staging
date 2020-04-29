@@ -1,0 +1,8 @@
+{{ $bulletItems := split .Params.urlvariable " " }}
+{{- $.Scratch.Add "newItem" .Site.Data -}}
+{{ range $index, $bullet := $bulletItems }}
+  {{- $new := index ($.Scratch.Get "newItem") $bullet -}}
+  {{- $.Scratch.Set "newItem" $new -}}
+{{ end }}
+{{- $returnItem := $.Scratch.Get "newItem" -}}
+{{- $returnItem -}}

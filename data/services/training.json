@@ -1,0 +1,84 @@
+{
+    "detail": {
+        "de": {
+            "dates": "Termine",
+            "courseOverview": "Kursüberblick",
+            "targetGroup": "Zielgruppe",
+            "courseAgenda": "Agenda",
+            "courseGoals": "Ziele",
+            "prerequisites": "Vorkenntnisse",
+            "duration": "Trainingsdauer",
+            "pricing": "Kosten je Teilnehmer",
+            "certificate": "Zertifikat",
+            "language": "Sprache",
+            "begin": "Beginn",
+            "end": "Ende",
+            "city": "Stadt",
+            "booking": "Termine & Anmeldung",
+            "book": "Buchen",
+            "booknow": "Jetzt buchen",
+            "soldout": "Ausverkauft",
+            "noDatesScheduled": "Zurzeit sind keine Termine geplant, aber sie können ein Vor-Ort Training buchen.",
+            "requestOnsiteBtn": "On-Site Training anfragen",
+            "languages": {
+              "de": "Deutsch",
+              "en": "Englisch"
+            }
+        },
+        "en": {
+            "dates": "Dates",
+            "courseOverview": "Course Overview",
+            "targetGroup": "Target Group",
+            "courseAgenda": "Agenda",
+            "courseGoals": "Goals",
+            "prerequisites": "Prerequisites",
+            "duration": "Duration",
+            "pricing": "Price per participant",
+            "certificate": "Certificate",
+            "language": "Language",
+            "begin": "Begin",
+            "end": "End",
+            "city": "City",
+            "booking": "Dates & Booking",
+            "book": "Book",
+            "booknow": "Book now",
+            "soldout": "Sold out",
+            "noDatesScheduled": "No dates scheduled, but you can request an on-site training",
+            "requestOnsiteBtn": "Request On-Site Training",
+            "languages": {
+              "de": "German",
+              "en": "English"
+            }
+        }
+    },
+    "overview": {
+      "de": {
+        "nexttrainings": "Nächste Termine",
+        "name": "Name",
+        "language": "Sprache",
+        "begin": "Beginn",
+        "end": "Ende",
+        "city": "Stadt",
+        "book": "Buchen",
+        "booknow": "Jetzt buchen",
+        "languages": {
+          "de": "Deutsch",
+          "en": "Englisch"
+        }
+      },
+      "en": {
+        "nexttrainings": "Next Dates",
+        "name": "Name",
+        "language": "Language",
+        "begin": "Begin",
+        "end": "End",
+        "city": "City",
+        "book": "Book",
+        "booknow": "Book now",
+        "languages": {
+          "de": "German",
+          "en": "English"
+        }
+      }
+    }
+}

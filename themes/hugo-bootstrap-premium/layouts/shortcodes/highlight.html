@@ -1,0 +1,28 @@
+<div class="full-width dark-bg highlight text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12"> <h1 class="light">{{.Params.title}}</h1> </div>
+
+			{{if len .Inner}}
+			<div class="col-xs-offset-2 col-xs-8">
+				<p class="light lead">{{.Inner}}</p>
+				{{if or .Params.btn .Params.btn2}}
+				<p>
+					{{if .Params.btn}}
+						<a class=" btn btn-lg {{if .Params.btntype}}{{.Params.btntype}}{{else}}btn-primary{{end}}" href="{{.Params.btnlink}}">{{.Params.btn}}</a>
+					{{end}}
+
+					{{if .Params.btn2}}
+						<a class="btn btn-lg {{if .Params.btn2type}}{{.Params.btn2type}}{{else}}btn-default{{end}}" href="{{.Params.btn2link}}">{{.Params.btn2}}</a>
+					{{end}}
+				</p>
+				{{end}}
+			</div>
+			{{end}}
+    </div>
+
+    {{ if strings.HasSuffix .Page.RelPermalink "/case-studies/" }}
+      {{ partial "modules/customers/featured-customers" . }}
+    {{ end }}
+	</div>
+</div>

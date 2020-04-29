@@ -1,0 +1,49 @@
+<div class="full-width dark-bg camundacon-hero-single text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="/img/camundacon/camundacon-logo.svg" class="camundacon-logo img img-responsive">
+      </div><div class="col-xs-offset-2 col-xs-8">
+        <p class="light lead camundacon-lead">Annual Camunda User Conference<br>September 20-21, 2018 | Berlin</p></div>
+      </div>
+    </div>
+  </div>
+
+<div class="row" style="margin-top: 100px; margin-bottom: 100px">
+  <div class="col-md-8" style="padding-right: 50px">
+    <p><a href="/events/camundacon#schedule">Back to CamundaCon Schedule</a></p>
+    <h2 class="lead light">{{.Params.title}}</h2>
+    <p>{{.Params.date}}</p>
+    <p>Presented by {{.Params.speakers}}</p>
+    <p>{{.Inner}}</p>
+  </div>
+  <div class="col-md-4">
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-4">
+          <img class="img img-responsive img-circle" style="border: 6px solid lightgrey; " src="/img/camundacon/speakers/{{.Params.headshot}}">
+        </div>
+        <div class="col-md-4">
+          {{if .Params.headshot2}}<img class="img img-responsive img-circle" style="border: 6px solid lightgrey; " src="/img/camundacon/speakers/{{.Params.headshot2}}">{{end}}
+        </div>
+        <div class="col-md-4">
+          {{if .Params.headshot3}}<img class="img img-responsive img-circle" style="border: 6px solid lightgrey; " src="/img/camundacon/speakers/{{.Params.headshot3}}">{{end}}
+        </div>
+      </div>
+    {{if .Params.about}}
+      <h4>About</h4>
+      <p>
+      {{.Params.about}} 
+      </p>
+    {{end}}
+    {{if .Params.about2}}
+      <p>
+      {{.Params.about2}} 
+      </p>
+    {{end}}
+    {{if .Params.about3}}
+      <p>
+      {{.Params.about3}} 
+      </p>
+    {{end}}
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="subnavigation with-nav" id="content">
+  <div class="container">
+    <h1 class="light lead">{{.Params.SubNavTitle}}</h1>
+
+    <ul class="nav nav-underlined-tabs">
+      <li class="scroll-left"><i class="glyphicon glyphicon-chevron-left"></i></li>
+      {{$curTitle := .Params.Title }}
+      {{ range where .Site.Pages "Section" .Section }}
+      <li class="{{ if (eq $curTitle .Title)}} active {{ end }}">
+        <a href="{{.Permalink}}">{{.Title}}</a>
+      </li>
+      {{ end }}
+      <li><i class="glyphicon glyphicon-chevron-right"></i></li>
+    </ul>
+  </div>
+</div>

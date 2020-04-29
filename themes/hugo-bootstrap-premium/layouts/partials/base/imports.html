@@ -1,0 +1,30 @@
+{{ "<!--[if lt IE 9]>" | safeHTML }}
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{{ "<![endif]-->" | safeHTML }}
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ "/css/klaro.min.css" | absURL }}">
+<!-- Klaro Consent Manager -->
+<script defer type="text/javascript" src="{{ "/js/config.js" | absURL }}"></script>
+<script defer type="text/javascript" src="{{ "/scripts/klaro.js" | absURL }}"></script>
+<!-- end Klaro Consent Manager -->
+
+<!-- Hubspot -->
+<script type="text/plain" data-src="//js.hs-scripts.com/4513465.js" data-name="hubspot">
+</script>
+
+<!-- matomo -->
+<script type="text/plain"
+        data-src="//cdn.matomo.cloud/camunda.matomo.cloud/matomo.js"
+        data-name="matomo">
+</script>
+
+<!-- <link rel="stylesheet" href="https://camunda.com/css/index.css">-->
+<link rel="stylesheet" href="{{ "/css/index.css" | absURL }}">
+{{ if .Page.Params.dmnsim }}
+<link rel="stylesheet" href="{{ "/css/dmn-simulator.css" | absURL }}">
+{{ end }}
+{{ range .Site.Params.customCSS }}
+<link rel="stylesheet" href="{{ . | absURL}}">
+{{ end }}

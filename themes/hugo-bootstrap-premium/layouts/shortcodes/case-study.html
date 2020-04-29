@@ -1,0 +1,64 @@
+<div class="customers">
+  <div class="full-width dark-bg">
+    <div class="container">
+      <div class="selects row">
+        <div class="col-md-3 col-md-offset-3">
+          <select class="form-control industry">
+            <option value="">{{ i18n "all_industries" }}</option>
+            <option value="consulting">{{ i18n "consulting" }}</option>
+            <option value="finance">{{ i18n "finance" }}</option>
+            <option value="insurance">{{ i18n "insurance" }}</option>
+            <option value="software">{{ i18n "software" }}</option>
+            <option value="public">{{ i18n "public" }}</option>
+            <option value="telco">{{ i18n "telco" }}</option>
+            <option value="utilities">{{ i18n "utilities" }}</option>
+            <option value="other">{{ i18n "other" }}</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select class="form-control region">
+            <option value="">{{ i18n "all_regions" }}</option>
+            <option value="emea">{{ i18n "emea" }}</option>
+            <option value="na">{{ i18n "na" }}</option>
+            <option value="apac">{{ i18n "apac" }}</option>
+            <option value="latam">{{ i18n "latam" }}</option>
+          </select>
+        </div>
+      </div>
+      <ul class="cards">
+        {{ $customerVars := index .Site.Data .Page.Section }}
+        {{ $overview := index $customerVars.overview .Site.LanguageCode }}
+        {{ range sort $overview "priority" "desc" }}
+        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12" data-customer-industry="{{.industry}}" data-customer-region="{{.region}}">
+          <div class="card-container">
+            <div class="card">
+              <div class="card-figure">
+                  <a href="{{.technicalName}}/">
+                      {{if .logo}}
+                      <img class="img-responsive" src="{{.logo}}" alt="Logo {{.company}}">
+                      {{else}}
+                      <span>{{.company}}</span>
+                      {{end}}
+                  </a>
+              </div>
+            <div class="name-wrap">
+                  <div class="name">{{.company}}</div>
+              </div> 
+              <hr>
+              <div class="customers-use-case">
+                {{.teaser}}
+              </div>
+              <div>
+                {{if .teaser}}
+                <a href="{{.technicalName}}/" class="btn btn-default">{{ i18n "learnmore" }}</a>
+                {{else}}
+                {{end}}
+              </div>
+            </div>
+            </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

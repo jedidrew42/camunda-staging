@@ -1,0 +1,28 @@
+{
+  "modeler": {
+    "latestVersion": "3.7.1",
+    "releaseDate": "March 17, 2020",
+    "baseUrl": "https://downloads.camunda.cloud/release/camunda-modeler/"
+  },
+  "camundabpm": {
+    "ee": {
+      "latestVersion": "7.12.0-ee",
+      "releaseDate": "Nov 30, 2019"
+    },
+    "ce": {
+      "latestVersion": "7.12.0",
+      "releaseDate": "Nov 30, 2019",
+      "zip": "https://downloads.camunda.cloud/release/camunda-bpm/tomcat/7.12/camunda-bpm-tomcat-7.12.0.zip",
+      "tar": "https://downloads.camunda.cloud/release/camunda-bpm/tomcat/7.12/camunda-bpm-tomcat-7.12.0.tar.gz"
+    },
+    "preview": {
+      "latestVersion": "7.13.0-alpha2",
+      "latestVersionEE": "7.13.0-alpha2-ee",
+      "releaseDate": "Feb 28, 2020",
+      "zip": "https://downloads.camunda.cloud/release/camunda-bpm/tomcat/7.13/camunda-bpm-tomcat-7.13.0-alpha2.zip",
+      "tar": "https://downloads.camunda.cloud/release/camunda-bpm/tomcat/7.13/camunda-bpm-tomcat-7.13.0-alpha2.tar.gz",
+      "releaseNotes": "https://jira.camunda.com/secure/ReleaseNote.jspa?projectId=10230&version=15699"
+    },
+    "showAlpha": true
+  }
+}

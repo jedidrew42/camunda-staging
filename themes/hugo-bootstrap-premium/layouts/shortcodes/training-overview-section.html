@@ -1,0 +1,21 @@
+{{if eq .Params.first "true"}}
+<div class="row">
+{{end}}
+<div class="training training-overview col-xs-12 col-md-4" data-type="{{.Params.type}}">
+  <h3 class="light lead">{{.Params.title}}</h3>
+  <p>{{.Inner}}</p>
+  <ul>
+    {{$language := .Site.LanguageCode}}
+    {{$sectionVars := index .Site.Data .Page.Section}}
+    {{$trainings := index $sectionVars.overview .Site.LanguageCode}}
+    {{$cat := .Params.type}}
+    {{ range $index, $training := $trainings }}
+    {{ if eq $training.category $cat }}
+      <li><a href="{{$training.technicalName}}">{{ if eq $language "de"}}{{$training.nameDe}}{{else}}{{$training.name}}{{end}}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{if eq .Params.last "true"}}
+</div>
+{{end}}

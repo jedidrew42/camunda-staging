@@ -1,0 +1,135 @@
+{{$i18nForm := index .Site.Data.contact.form .Site.LanguageCode}}
+<div id="contact" style="margin-bottom: 60px; margin-top:50px; {{ if .Params.contacthidden }}display:none;{{ end }}">
+  <div class="container">
+    <center>
+      <h2 class="light lead">{{ if .Params.contactdemo }}{{$i18nForm.titleDemo}}{{else}}{{$i18nForm.title}}{{end}}</h2>
+      <p class="light lead">{{ if .Params.contactdemo }}{{$i18nForm.titleDemoSub}}{{else}}{{$i18nForm.titleSub}}{{end}}</p>
+    </center>
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+
+  <center>
+    <div id="contactusform" class="hbspt-form"></div>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+      portalId: "4513465",
+      formId: "{{$i18nForm.hubspotForm}}",
+      css: "",
+      target: "#contactusform",
+      locale: "{{.Site.LanguageCode}}",
+      onFormSubmit: function($form) {
+        $($form).trigger('contactRequest');
+      }
+    });
+    </script>
+    </center>
+
+</div>
+</div>
+<!--
+    <form>
+      <input type="hidden" name="landingPage" value="{{.Permalink}}">
+      <div class="row" style="margin-top: 30px">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" name="firstname" id="inputFirstname" placeholder="{{$i18nForm.firstname}}" required>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" name="lastname" id="inputLastname" placeholder="{{$i18nForm.lastname}}" required>
+          </div>
+
+
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="inputEmail" placeholder="{{$i18nForm.email}}" required>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" name="phone" id="inputPhone" placeholder="{{$i18nForm.phone}}" required>
+          </div>
+
+          <div class="form-group">
+            <select name="usage" class="form-control" required>
+                <option value="">{{$i18nForm.usage}}</option>
+                {{range $usage := $i18nForm.usageOptions}}
+                {{range $key,$val := $usage}}
+                <option value="{{$key}}">{{$val}}</option>
+                {{end}}
+                {{end}}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" name="company" id="inputCompany" placeholder="{{$i18nForm.company}}" required>
+          </div>
+
+          <div class="form-group">
+            <select name="industry" class="form-control" required>
+                <option value="">{{$i18nForm.industry}}</option>
+                {{range $industry := $i18nForm.industryOptions}}
+                {{range $key,$val := $industry}}
+                <option value="{{$key}}">{{$val}}</option>
+                {{end}}
+                {{end}}
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="employees" class="form-control" required>
+                <option value="">{{$i18nForm.employees}}</option>
+                {{range $employeesOptions := $i18nForm.employeesOptions}}
+                {{range $key,$val := $employeesOptions}}
+                <option value="{{$key}}">{{$val}}</option>
+                {{end}}
+                {{end}}
+            </select>
+          </div>
+
+          <div class="form-group">
+             <select name="developers" class="form-control" required>
+                  <option value="">{{$i18nForm.developers}}</option>
+                  {{range $developersOptions := $i18nForm.developersOptions}}
+                  {{range $key,$val := $developersOptions}}
+                  <option value="{{$key}}">{{$val}}</option>
+                  {{end}}
+                  {{end}}
+              </select>
+          </div>
+
+          <div class="form-group">
+              <select name="jobdesc" class="form-control" required>
+                  <option value="">{{$i18nForm.jobdesc}}</option>
+                  {{range $jobdesc := $i18nForm.jobdescOptions}}
+                  {{range $key,$val := $jobdesc}}
+                  <option value="{{$key}}">{{$val}}</option>
+                  {{end}}
+                  {{end}}
+              </select>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="{{$i18nForm.message}}"></textarea>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg">{{$i18nForm.submit}}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="success-message">
+      <p>{{$i18nForm.successMessage}}</p>
+    </div>
+
+  </div>
+</div>
+-->

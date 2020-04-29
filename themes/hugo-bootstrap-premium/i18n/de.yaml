@@ -1,0 +1,54 @@
+- id: filter_by
+  translation: "Filter nach"
+- id: 404error
+  translation: "404 Nicht gefunden"
+- id: 404desc
+  translation: "Leider haben wir nichts gefunden, sorry!"
+- id: 404link
+  translation: "Homepage"
+- id: logoalt
+  translation: "Camunda BPM is a scalable workflow and decision automation platform"
+- id: all
+  translation: Alle
+- id: all_industries
+  translation: Alle Branchen
+- id: all_levels
+  translation: Alle Level
+- id: all_hq
+  translation: "Alle Länder"
+- id: industry
+  translation: Industrie
+- id: finance
+  translation: Finanzdienstleister
+- id: insurance
+  translation: Versicherer
+- id: telco
+  translation: Telekommunikation
+- id: utilities
+  translation: Versorger
+- id: public
+  translation: Öffentlicher Sektor
+- id: software
+  translation: Software
+- id: consulting
+  translation: Unternehmensberatung
+- id: other
+  translation: Andere
+- id: region
+  translation: Region
+- id: all_regions
+  translation: Alle Regionen
+- id: dach
+  translation: DACH
+- id: na
+  translation: Nordamerika
+- id: latam
+  translation: Lateinamerika
+- id: apac
+  translation: Asia-Pazifik
+- id: emea
+  translation: Europa und Mittlerer Osten
+- id: learnmore
+  translation: Mehr Infos
+- id: readmore
+  translation: Mehr lesen 

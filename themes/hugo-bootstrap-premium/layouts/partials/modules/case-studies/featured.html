@@ -1,0 +1,61 @@
+<div class="customer-single">
+	<div class="full-width ">
+	  <section class="container">
+		 <div class="row">
+			<div class="col-md-3 col-xs-12">
+			  {{if .Params.teaser}}
+			  <p class="teaser-text">{{.Params.teaser | markdownify}}</p>
+			  {{end}}
+			</div>
+
+			<div class="col-md-9 col-xs-12">
+			  {{if .Params.companydescription}}
+			  <div class="row">
+				 <div class="col-xs-12">
+					<p>{{.Params.companydescription | markdownify}}</p>
+				 </div>
+			  </div>
+			  {{end}}
+
+			  {{if .Params.customerquote}}
+
+			  <div class="row">
+				 <div class="col-xs-12">
+					<h2 class="light">Testimonial</h2>
+					{{.Params.customerquote | markdownify}}
+				 </div>
+			  </div>
+			  {{end}}
+
+			  {{if .Params.usecase}}
+			  <div class="row">
+					<div class="col-xs-12">
+					  <h2 class="light">Success Story<br>Camunda BPM at {{.Params.company}}</h2>
+					</div>
+				 </div>
+				 <div class="row">
+					{{if .Params.thumbnail}}
+					<div class="col-md-3 col-xs-6">
+					  <img class="img-responsive usecase-thumbnail" src="{{.Params.thumbnail}}" alt="Use Case - {{.Params.title}}">
+					</div>
+					{{end}}
+					<div class="col-md-9 col-xs-6">
+					  <p>{{.Params.usecase | markdownify}}</p>
+					  <a href="{{.Params.pdf}}" target="_blank" class="btn btn-default">Download</a>
+					</div>
+				 </div>
+				 {{end}}
+
+				 {{if .Params.videolink}}
+				 <div class="row video">
+					<div class="col-xs-12 text-center">
+					  <iframe class="embed-responsive-item" src="{{.Params.videolink}}"></iframe>
+					</div>
+				 </div>
+				 {{end}}
+
+			</div>
+		 </div>
+	  </section>
+	</div>
+ </div>

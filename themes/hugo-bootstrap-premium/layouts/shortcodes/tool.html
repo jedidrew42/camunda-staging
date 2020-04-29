@@ -1,0 +1,22 @@
+<style>
+  .download {
+    margin-top: 30px;
+    margin-bottom: 30px
+  }
+</style>
+<div class="container bs-docs-container" style="text-align:center; padding-top:60px">
+  <h1>{{.Params.title}}</h1>
+  <div class="teaser" style="max-height:450px;overflow:hidden;border-bottom:solid 1px #CCC">
+    <img src="/img/bpmn-tool/cawemo-bpmn-editor.png" style="max-width: 80%">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="download">
+        <a href="https://cawemo.com/signup"
+           class="btn btn-lg btn-primary"
+           target="_blank">Register for free</a>
+      </p>
+      {{.Inner}}
+    </div>
+  </div>
+</div>

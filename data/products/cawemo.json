@@ -1,0 +1,226 @@
+{
+  "de": {
+    "enterprisehint": "Als Teil von Camunda Enterprise",
+    "features": [
+    {
+      "title": "",
+      "head": false,
+      "cta": true,
+      "free": "<p>SaaS<br>cawemo.com</p><a href='https://cawemo.com/signup' class=''>Kostenlos registrieren</a>",
+      "saas": "<p>SaaS<br>cawemo.com</p><a href='#contact' class='cawemo-saas-js'>Angebot anfordern</a>",
+      "enterprise": "<p>On-Premise<br>selbst gehostet</p><a href='#contact' class='cawemo-enterprise-js'>Angebot anfordern</a>"
+    },
+    {
+      "title": "Modellierung",
+      "head": true
+    },
+    {
+      "title": "BPMN Prozessdiagramme erstellen",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "BPMN 2.0 XML Importieren",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "BPMN 2.0 XML oder PNG exportieren",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Spezifikationsannotationen",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Kollaboration",
+      "head": true
+    },
+    {
+      "title": "Kollaboratives Bearbeiten",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Kommentare & Diskussionen",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "In HTML oder Confluence einbetten",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Diagramme per URL teilen",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Diagrammhistorie",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Visuelle Diagrammvergleiche",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Camunda Stack Integrationen",
+      "head": true
+    },
+    {
+      "title": "Camunda Engine Integration",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Camunda Modeler Integration",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Enterprise Support und Wartung (als Teil des Camunda Enterprise Vertrags)",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    }
+    ]
+  },
+  "en": {
+    "enterprisehint": "As part of Camunda Enterprise",
+    "features": [
+    {
+      "title": "",
+      "head": false,
+      "cta": true,
+      "free": "<p>SaaS<br>cawemo.com</p><a href='https://cawemo.com/signup' class=''>Register for free</a>",
+      "saas": "<p>SaaS<br>cawemo.com</p><a href='#contact' class='cawemo-saas-js'>Request quote</a>",
+      "enterprise": "<p>On-Premise<br>self-hosted</p><a href='#contact' class='cawemo-enterprise-js'>Request quote</a>"
+    },
+    {
+      "title": "Modeling",
+      "head": true
+    },
+    {
+      "title": "Create BPMN process diagrams",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Import BPMN 2.0 XML",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Export BPMN 2.0 XML or PNG",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Specification Annotations",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Collaboration & Sharing",
+      "head": true
+    },
+    {
+      "title": "Collaborative Editing",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Comments & Discussions",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Embedding (HTML, Confluence)",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Link-Sharing",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Milestone History",
+      "head": false,
+      "free": true,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Visual diagram comparisons",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Camunda Stack Integrations",
+      "head": true
+    },
+    {
+      "title": "Camunda Engine Integration",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Camunda Modeler Integration",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    },
+    {
+      "title": "Enterprise Support and Maintenance (as part of your Camunda Enterprise contract)",
+      "head": false,
+      "saas": true,
+      "enterprise": true
+    }
+    ]
+  }
+}

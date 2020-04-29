@@ -1,0 +1,39 @@
+<div class="press">
+  <div class="full-width dark-bg highlight text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="light">Press</h1>
+        </div>
+        <div class="col-xs-offset-2 col-xs-8">
+          <p class="light lead">
+            Camunda Press Releases
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="press-single">
+    {{$sectionVars := index .Site.Data .Page.Section}}
+    {{$i18n := index $sectionVars.press.detail .Site.LanguageCode}}
+    {{if eq .Params.text ""}}
+    <div class="header">
+      <div class="text-center">
+        <p>{{$i18n.notavailable}}</p>
+      </div>
+    </div>
+    {{else}}
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-2 col-md-8">
+        <h1 class="light text-center">{{.Params.title}}</h1>
+        <div class="meta">
+          <p class="parse-date">{{.Params.date}}</p>
+        </div>
+        <article>
+          {{.Params.text | markdownify}}
+        </article>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</div>
