@@ -35,13 +35,21 @@
     data-src="//js.hs-scripts.com/4513465.js">
 </script>
 
-<!-- Matomo add these to staging -->
-<script type="text/plain"
-data-type="text/javascript"
-data-name="matomo"
-data-src="//cdn.matomo.cloud/camunda.matomo.cloud/matomo.js">
-  </script>
-  <!-- End Matomo Code -->
+<script type="text/plain" data-type="application/javascript"
+        data-name="matomo">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  _paq.push(['rememberConsentGiven']);
+  (function() {
+    var u="https://camunda.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/camunda.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 
 <!-- Start of HubSpot Embed Code 
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script> -->
