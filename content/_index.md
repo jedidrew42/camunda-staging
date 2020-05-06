@@ -9,7 +9,7 @@ draft: false
 
 {{<keyvisual title="Process Automation Reinvented for the Digital Enterprise" btnshref="/products,/download" icon="icon-bpmn-io" btnsclass="btn-primary,btn-default" btnslabel="Learn more,Download" listtitle1="Developer-Friendly" listtitle2="Highly" listtitle2b="Scalable" listtitle3="BPMN / DMN Standards-Based" listtitle4="Business-IT Collaborative" >}}Our open source workflow and decision automation tools enable thousands of developers to automate business processes and gain the agility, visibility and scale that is needed to achieve digital transformation{{</keyvisual>}}
 
-{{<news img="webinar-white.png" title="Upcoming Webinar - Camunda Question Corner" text="Thursday, April 30, 2020 at 4pm CET / 9am ET"  btntext="Register Now" btnlink="https://camunda.com/learn/webinars/camunda-question-corner/">}}
+{{<news img="webinar-white.png" title="Upcoming Webinar - Process Automation: The Missing Link In Your Digital Transformation Journey" text="Wednesday, May 20, 2020 at 5:00 pm CET (11 am ET)"  btntext="Register Now" btnlink="https://camunda.com/learn/webinars/process-automation-the-missing-link-in-your-digital-transformation-journey/">}}
 
 <!-- {{<news img="whitepaper-white.png" title="White Paper: Building Scalable Business Automation with Microservices by Sandy Kemsley." text=" "  btntext="Download Now" btnlink="https://camunda.com/learn/whitepapers/building-scalable-business-automation-with-microservices/">}}-->
 
